@@ -1,0 +1,62 @@
+check_id,member,tube,note,target_hz,predicted_L_calc_in,predicted_L_cut_in,bore_id_in,plug_type,measured_L_in,measured_hz,cents_error,tolerance_cents,environment_temp_F,environment_RH_pct,result,action,date_measured,notes
+VAL-T-A1,SKZ-TOYO,Arka 1,D3,146.83,22.459,22.646,0.750,TBD,,,,±10,68,45,,TBD,,Longest tube — verify straight grain and consistent bore before cutting
+VAL-T-A2,SKZ-TOYO,Arka 2,F#3,185.00,17.699,17.886,0.750,TBD,,,,±10,68,45,,TBD,,
+VAL-T-A3,SKZ-TOYO,Arka 3,A3,220.00,14.785,14.973,0.750,TBD,,,,±10,68,45,,TBD,,
+VAL-T-A4,SKZ-TOYO,Arka 4,C4,261.63,12.335,12.522,0.750,TBD,,,,±10,68,45,,TBD,,
+VAL-T-A5,SKZ-TOYO,Arka 5,E4,329.63,9.663,9.851,0.750,TBD,,,,±5,68,45,,TBD,,
+VAL-T-A6,SKZ-TOYO,Arka 6,G4,392.00,8.028,8.215,0.750,TBD,,,,±5,68,45,,TBD,,
+VAL-T-A7,SKZ-TOYO,Arka 7,B4,493.88,6.245,6.432,0.750,TBD,,,,±5,68,45,,TBD,,
+VAL-T-I1,SKZ-TOYO,Ira 1,E3,164.81,19.942,20.129,0.750,TBD,,,,±10,68,45,,TBD,,
+VAL-T-I2,SKZ-TOYO,Ira 2,G3,196.00,16.671,16.858,0.750,TBD,,,,±10,68,45,,TBD,,
+VAL-T-I3,SKZ-TOYO,Ira 3,B3,246.94,13.105,13.292,0.750,TBD,,,,±10,68,45,,TBD,,
+VAL-T-I4,SKZ-TOYO,Ira 4,D4,293.66,10.922,11.109,0.750,TBD,,,,±10,68,45,,TBD,,
+VAL-T-I5,SKZ-TOYO,Ira 5,F#4,369.99,8.542,8.729,0.750,TBD,,,,±5,68,45,,TBD,,
+VAL-T-I6,SKZ-TOYO,Ira 6,A4,440.00,7.085,7.272,0.750,TBD,,,,±5,68,45,,TBD,,
+VAL-Z-A1,SKZ-ZANKA,Arka 1,G3,196.00,16.773,16.961,0.625,TBD,,,,±10,68,45,,TBD,,Primary Zanka melodic tube
+VAL-Z-A2,SKZ-ZANKA,Arka 2,B3,246.94,13.207,13.395,0.625,TBD,,,,±10,68,45,,TBD,,
+VAL-Z-A3,SKZ-ZANKA,Arka 3,D4,293.66,11.024,11.212,0.625,TBD,,,,±10,68,45,,TBD,,
+VAL-Z-A4,SKZ-ZANKA,Arka 4,F4,349.23,9.189,9.376,0.625,TBD,,,,±5,68,45,,TBD,,
+VAL-Z-A5,SKZ-ZANKA,Arka 5,A4,440.00,7.188,7.375,0.625,TBD,,,,±5,68,45,,TBD,,Primary reference — A4=440 Hz sanity check
+VAL-Z-A6,SKZ-ZANKA,Arka 6,C5,523.25,5.962,6.150,0.625,TBD,,,,±5,68,45,,TBD,,
+VAL-Z-A7,SKZ-ZANKA,Arka 7,E5,659.26,4.627,4.814,0.625,TBD,,,,±5,68,45,,TBD,,
+VAL-Z-I1,SKZ-ZANKA,Ira 1,A3,220.00,14.888,15.075,0.625,TBD,,,,±10,68,45,,TBD,,
+VAL-Z-I2,SKZ-ZANKA,Ira 2,C4,261.63,12.437,12.625,0.625,TBD,,,,±10,68,45,,TBD,,
+VAL-Z-I3,SKZ-ZANKA,Ira 3,E4,329.63,9.766,9.953,0.625,TBD,,,,±10,68,45,,TBD,,
+VAL-Z-I4,SKZ-ZANKA,Ira 4,G4,392.00,8.130,8.318,0.625,TBD,,,,±5,68,45,,TBD,,
+VAL-Z-I5,SKZ-ZANKA,Ira 5,B4,493.88,6.347,6.535,0.625,TBD,,,,±5,68,45,,TBD,,
+VAL-Z-I6,SKZ-ZANKA,Ira 6,D5,587.33,5.256,5.443,0.625,TBD,,,,±5,68,45,,TBD,,
+VAL-M-A1,SKZ-MALTA,Arka 1,D4,293.66,11.127,11.314,0.500,TBD,,,,±10,68,45,,TBD,,
+VAL-M-A2,SKZ-MALTA,Arka 2,F#4,369.99,8.747,8.934,0.500,TBD,,,,±5,68,45,,TBD,,
+VAL-M-A3,SKZ-MALTA,Arka 3,A4,440.00,7.290,7.478,0.500,TBD,,,,±5,68,45,,TBD,,A4 sanity check
+VAL-M-A4,SKZ-MALTA,Arka 4,C5,523.25,6.065,6.252,0.500,TBD,,,,±5,68,45,,TBD,,
+VAL-M-A5,SKZ-MALTA,Arka 5,E5,659.26,4.729,4.917,0.500,TBD,,,,±5,68,45,,TBD,,
+VAL-M-A6,SKZ-MALTA,Arka 6,G5,783.99,3.911,4.099,0.500,TBD,,,,±5,68,45,,TBD,,
+VAL-M-A7,SKZ-MALTA,Arka 7,B5,987.77,3.020,3.207,0.500,TBD,,,,±5,68,45,,TBD,,Shortest Malta tube — careful trim
+VAL-M-I1,SKZ-MALTA,Ira 1,E4,329.63,9.868,10.056,0.500,TBD,,,,±10,68,45,,TBD,,
+VAL-M-I2,SKZ-MALTA,Ira 2,G4,392.00,8.233,8.420,0.500,TBD,,,,±5,68,45,,TBD,,
+VAL-M-I3,SKZ-MALTA,Ira 3,B4,493.88,6.450,6.637,0.500,TBD,,,,±5,68,45,,TBD,,
+VAL-M-I4,SKZ-MALTA,Ira 4,D5,587.33,5.358,5.546,0.500,TBD,,,,±5,68,45,,TBD,,
+VAL-M-I5,SKZ-MALTA,Ira 5,F#5,739.99,4.168,4.356,0.500,TBD,,,,±5,68,45,,TBD,,
+VAL-M-I6,SKZ-MALTA,Ira 6,A5,880.00,3.440,3.627,0.500,TBD,,,,±5,68,45,,TBD,,
+VAL-C-A1,SKZ-CHILI,Arka 1,A4,440.00,7.393,7.580,0.375,TBD,,,,±5,68,45,,TBD,,A4 sanity check for Chili
+VAL-C-A2,SKZ-CHILI,Arka 2,C#5,554.37,5.804,5.991,0.375,TBD,,,,±5,68,45,,TBD,,
+VAL-C-A3,SKZ-CHILI,Arka 3,E5,659.26,4.832,5.019,0.375,TBD,,,,±5,68,45,,TBD,,
+VAL-C-A4,SKZ-CHILI,Arka 4,G5,783.99,4.014,4.201,0.375,TBD,,,,±5,68,45,,TBD,,
+VAL-C-A5,SKZ-CHILI,Arka 5,B5,987.77,3.122,3.310,0.375,TBD,,,,±5,68,45,,TBD,,
+VAL-C-A6,SKZ-CHILI,Arka 6,D6,1174.66,2.577,2.764,0.375,TBD,,,,±5,68,45,,TBD,,Short — check carefully
+VAL-C-A7,SKZ-CHILI,Arka 7,F#6,1479.98,1.982,2.169,0.375,TBD,,,,±10,68,45,,TBD,,⚠ Prototype FIRST — 50mm limit for playability (see risks.md AC-04)
+VAL-C-I1,SKZ-CHILI,Ira 1,B4,493.88,6.552,6.740,0.375,TBD,,,,±5,68,45,,TBD,,
+VAL-C-I2,SKZ-CHILI,Ira 2,D5,587.33,5.461,5.648,0.375,TBD,,,,±5,68,45,,TBD,,
+VAL-C-I3,SKZ-CHILI,Ira 3,F#5,739.99,4.271,4.458,0.375,TBD,,,,±5,68,45,,TBD,,
+VAL-C-I4,SKZ-CHILI,Ira 4,A5,880.00,3.542,3.730,0.375,TBD,,,,±5,68,45,,TBD,,
+VAL-C-I5,SKZ-CHILI,Ira 5,C#6,1108.73,2.748,2.936,0.375,TBD,,,,±5,68,45,,TBD,,
+VAL-C-I6,SKZ-CHILI,Ira 6,E6,1318.51,2.262,2.450,0.375,TBD,,,,±5,68,45,,TBD,,
+VAL-DIM-01,All,Frame width check — Toyo,,,,,,,,,,,,,TBD,,Measure actual assembled frame width vs 13.750-in spec
+VAL-DIM-02,All,Frame width check — Zanka,,,,,,,,,,,,,TBD,,Measure actual assembled vs 11.423-in spec
+VAL-DIM-03,All,Frame width check — Malta,,,,,,,,,,,,,TBD,,Measure actual assembled vs 9.304-in spec
+VAL-DIM-04,All,Frame width check — Chili,,,,,,,,,,,,,TBD,,Measure actual assembled vs 7.159-in spec
+VAL-BORE-01,All,Bore ID check — Toyo sample,,,0.750,,,,,,,,,,TBD,,Caliper-verify bore ID on 3 random Toyo tubes before computing lengths
+VAL-BORE-02,All,Bore ID check — Zanka sample,,,0.625,,,,,,,,,,TBD,,
+VAL-BORE-03,All,Bore ID check — Malta sample,,,0.500,,,,,,,,,,TBD,,
+VAL-BORE-04,All,Bore ID check — Chili sample,,,0.375,,,,,,,,,,TBD,,
+VAL-PHYS-01,All,A4 = 440 Hz sanity check — Zanka Arka5,SKZ-ZANKA,440.00,7.188,7.375,0.625,,,,,±2,68,45,,TBD,,Primary physics sanity check — use Korg CA-1
