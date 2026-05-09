@@ -1,0 +1,46 @@
+<svg viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg" width="760" height="440">
+<rect width="100%" height="100%" fill="white"/>
+<text x="380" y="24" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">SIKU (ZAMPOÑA) — FAMILY OVERVIEW · 4-MEMBER ENSEMBLE</text>
+<text x="380" y="40" font-family="monospace" font-size="9" text-anchor="middle" fill="#555">Front silhouette of Arka rank (7 tubes) per member · All blow ends at datum · Scale: relative</text>
+<line x1="20" y1="70" x2="750" y2="70" stroke="#cc0000" stroke-width="1.5" stroke-dasharray="10,6"/>
+<text x="22" y="65" font-family="monospace" font-size="9" fill="#cc0000">BLOW-END DATUM (Y=0, flush)</text>
+<rect x="108.0" y="70.0" width="74.0" height="226.5" fill="#1a4db5" fill-opacity="0.22" stroke="#1a4db5" stroke-width="2" rx="4"/>
+<line x1="103.0" y1="70.0" x2="103.0" y2="296.5" stroke="#1a4db5" stroke-width="1"/>
+<text x="100.0" y="183.2" transform="rotate(-90,100.0,183.2)" font-family="monospace" font-size="8" text-anchor="middle" fill="#1a4db5">22.65"</text>
+<line x1="108.0" y1="232.1" x2="182.0" y2="232.1" stroke="#1a4db5" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="145.0" y="245.1" font-family="monospace" font-size="8" text-anchor="middle" fill="#1a4db5">6.43" (shortest)</text>
+<text x="145.0" y="314.5" font-family="monospace" font-size="9" font-weight="bold" text-anchor="middle" fill="#1a4db5">Toyo</text>
+<text x="145.0" y="327.5" font-family="monospace" font-size="8" text-anchor="middle" fill="#1a4db5">Bass</text>
+<text x="145.0" y="340.5" font-family="monospace" font-size="9" text-anchor="middle" fill="#333">Key G3</text>
+<text x="145.0" y="353.5" font-family="monospace" font-size="8" text-anchor="middle" fill="#555">W=13.75"  ·  13 tubes</text>
+<rect x="284.2" y="126.9" width="61.5" height="169.6" fill="#2a6db5" fill-opacity="0.22" stroke="#2a6db5" stroke-width="2" rx="4"/>
+<line x1="279.2" y1="126.9" x2="279.2" y2="296.5" stroke="#2a6db5" stroke-width="1"/>
+<text x="276.2" y="211.7" transform="rotate(-90,276.2,211.7)" font-family="monospace" font-size="8" text-anchor="middle" fill="#2a6db5">16.96"</text>
+<line x1="284.2" y1="248.3" x2="345.8" y2="248.3" stroke="#2a6db5" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="315.0" y="261.3" font-family="monospace" font-size="8" text-anchor="middle" fill="#2a6db5">4.81" (shortest)</text>
+<text x="315.0" y="314.5" font-family="monospace" font-size="9" font-weight="bold" text-anchor="middle" fill="#2a6db5">Zanka</text>
+<text x="315.0" y="327.5" font-family="monospace" font-size="8" text-anchor="middle" fill="#2a6db5">Tenor</text>
+<text x="315.0" y="340.5" font-family="monospace" font-size="9" text-anchor="middle" fill="#333">Key C4</text>
+<text x="315.0" y="353.5" font-family="monospace" font-size="8" text-anchor="middle" fill="#555">W=11.42"  ·  13 tubes</text>
+<rect x="460.0" y="183.3" width="50.1" height="113.1" fill="#2a9db5" fill-opacity="0.22" stroke="#2a9db5" stroke-width="2" rx="4"/>
+<line x1="455.0" y1="183.3" x2="455.0" y2="296.5" stroke="#2a9db5" stroke-width="1"/>
+<text x="452.0" y="239.9" transform="rotate(-90,452.0,239.9)" font-family="monospace" font-size="8" text-anchor="middle" fill="#2a9db5">11.31"</text>
+<line x1="460.0" y1="264.4" x2="510.0" y2="264.4" stroke="#2a9db5" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="485.0" y="277.4" font-family="monospace" font-size="8" text-anchor="middle" fill="#2a9db5">3.21" (shortest)</text>
+<text x="485.0" y="314.5" font-family="monospace" font-size="9" font-weight="bold" text-anchor="middle" fill="#2a9db5">Malta</text>
+<text x="485.0" y="327.5" font-family="monospace" font-size="8" text-anchor="middle" fill="#2a9db5">Alto</text>
+<text x="485.0" y="340.5" font-family="monospace" font-size="9" text-anchor="middle" fill="#333">Key G4</text>
+<text x="485.0" y="353.5" font-family="monospace" font-size="8" text-anchor="middle" fill="#555">W=9.30"  ·  13 tubes</text>
+<rect x="635.7" y="220.7" width="38.5" height="75.8" fill="#2ab58a" fill-opacity="0.22" stroke="#2ab58a" stroke-width="2" rx="4"/>
+<line x1="630.7" y1="220.7" x2="630.7" y2="296.5" stroke="#2ab58a" stroke-width="1"/>
+<text x="627.7" y="258.6" transform="rotate(-90,627.7,258.6)" font-family="monospace" font-size="8" text-anchor="middle" fill="#2ab58a">7.58"</text>
+<line x1="635.7" y1="274.8" x2="674.3" y2="274.8" stroke="#2ab58a" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="655.0" y="287.8" font-family="monospace" font-size="8" text-anchor="middle" fill="#2ab58a">2.17" (shortest)</text>
+<text x="655.0" y="314.5" font-family="monospace" font-size="9" font-weight="bold" text-anchor="middle" fill="#2ab58a">Chili</text>
+<text x="655.0" y="327.5" font-family="monospace" font-size="8" text-anchor="middle" fill="#2ab58a">Soprano</text>
+<text x="655.0" y="340.5" font-family="monospace" font-size="9" text-anchor="middle" fill="#333">Key D5</text>
+<text x="655.0" y="353.5" font-family="monospace" font-size="8" text-anchor="middle" fill="#555">W=7.16"  ·  13 tubes</text>
+<rect x="0" y="402" width="760" height="38" fill="#f5f5f5" stroke="#444" stroke-width="1"/>
+<text x="10" y="416" font-family="monospace" font-size="9">Toyo: bore 0.750" · Zanka: bore 0.625" · Malta: bore 0.500" · Chili: bore 0.375"   |   Each rank = Arka (7) + Ira (6) = 13 tubes, split for duet play</text>
+<text x="10" y="430" font-family="monospace" font-size="9">Date: 2026-05-08   Rev: A   tonykoop/siku-zampona · CC BY 4.0   |   Physics: stopped pipe  L = 13552/(4f) − 0.82×bore + 3/16" trim</text>
+</svg>

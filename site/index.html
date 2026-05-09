@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siku (Zampoña) — Build Log · Heifer Zephyr</title>
+<style>
+  /* === Type system: Fraunces headlines / Inter body / JetBrains Mono code === */
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --cream:    #fdf8f0;
+    --linen:    #f0e8d8;
+    --sand:     #e0d0b8;
+    --brown:    #7a5c38;
+    --dark:     #2a1f14;
+    --blue:     #2a6db5;
+    --blue-lt:  #ddeeff;
+    --orange:   #c87030;
+    --orange-lt:#fff0d8;
+    --green:    #2a7a3a;
+    --red:      #9a2020;
+    --rule:     #d0c0a0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    background: var(--cream);
+    color: var(--dark);
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* === Header === */
+  header {
+    border-bottom: 2px solid var(--brown);
+    padding: 40px 0 24px;
+    margin-bottom: 48px;
+  }
+
+  .wordmark {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: var(--brown);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--dark);
+  }
+
+  .subtitle {
+    font-size: 16px;
+    color: var(--brown);
+    margin-top: 6px;
+  }
+
+  .meta {
+    font-size: 12px;
+    color: #888;
+    margin-top: 12px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* === Hero placeholder === */
+  .hero-placeholder {
+    background: var(--linen);
+    border: 2px dashed var(--sand);
+    border-radius: 6px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--brown);
+    font-size: 13px;
+    margin-bottom: 56px;
+    gap: 8px;
+  }
+
+  .hero-placeholder .shot-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #aaa;
+  }
+
+  /* === Sections === */
+  section { margin-bottom: 56px; }
+
+  h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--dark);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--brown);
+    margin: 28px 0 12px;
+  }
+
+  p { margin-bottom: 14px; }
+
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* === Callout boxes === */
+  .callout {
+    background: var(--orange-lt);
+    border-left: 4px solid var(--orange);
+    border-radius: 0 4px 4px 0;
+    padding: 14px 18px;
+    font-size: 14px;
+    margin: 20px 0;
+  }
+
+  .callout.blue {
+    background: var(--blue-lt);
+    border-left-color: var(--blue);
+  }
+
+  .callout strong { color: var(--dark); }
+
+  /* === Tables === */
+  .table-wrap { overflow-x: auto; margin: 20px 0; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  th {
+    background: var(--linen);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-align: left;
+    padding: 8px 12px;
+    border-bottom: 2px solid var(--sand);
+    white-space: nowrap;
+    color: var(--brown);
+  }
+
+  td {
+    padding: 7px 12px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--linen); }
+
+  td.mono, th.mono { font-family: 'JetBrains Mono', monospace; }
+
+  .arka { color: var(--blue); font-weight: 600; }
+  .ira  { color: var(--orange); font-weight: 600; }
+
+  /* === Phase cards === */
+  .phases { display: grid; gap: 16px; }
+
+  .phase-card {
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .phase-header {
+    background: var(--linen);
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .phase-num {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--brown);
+    min-width: 28px;
+  }
+
+  .phase-title {
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .phase-body {
+    padding: 14px 18px;
+    font-size: 14px;
+    color: #444;
+  }
+
+  .phase-body ul {
+    padding-left: 18px;
+  }
+
+  .phase-body li { margin-bottom: 4px; }
+
+  /* === Family grid === */
+  .family-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+  }
+
+  .family-card {
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 18px;
+    background: white;
+    text-align: center;
+  }
+
+  .family-card .name {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  .family-card .key { color: var(--brown); font-size: 13px; margin-bottom: 10px; }
+
+  .family-card .spec {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #666;
+    line-height: 2;
+  }
+
+  .family-card .circle-wrap {
+    margin: 12px auto;
+    position: relative;
+    width: 60px;
+    height: 60px;
+  }
+
+  .family-card svg { width: 60px; height: 60px; }
+
+  /* === Photo placeholders === */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .photo-box {
+    background: var(--linen);
+    border: 1px dashed var(--sand);
+    border-radius: 4px;
+    aspect-ratio: 4/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: var(--brown);
+    gap: 4px;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .photo-box .shot-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #aaa;
+  }
+
+  /* === Tube viz === */
+  .tube-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    margin: 20px 0;
+    padding: 16px;
+    background: var(--linen);
+    border-radius: 6px;
+    overflow-x: auto;
+  }
+
+  .tube {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .tube-bar {
+    width: 24px;
+    border-radius: 3px 3px 0 0;
+    border: 1.5px solid;
+  }
+
+  .tube.arka-tube .tube-bar { background: var(--blue-lt); border-color: var(--blue); }
+  .tube.ira-tube  .tube-bar { background: var(--orange-lt); border-color: var(--orange); }
+
+  .tube-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: #666;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  /* === Footer === */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 24px;
+    font-size: 12px;
+    color: #888;
+    margin-top: 80px;
+  }
+
+  footer .wordmark { margin-bottom: 4px; }
+
+  /* === Responsive === */
+  @media (max-width: 600px) {
+    .photo-grid { grid-template-columns: repeat(2, 1fr); }
+    .family-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ HEADER -->
+<header>
+  <div class="wordmark">Heifer Zephyr</div>
+  <h1>Siku (Zampoña)</h1>
+  <div class="subtitle">Andean Panpipe — Four-Member Family · v4.3 Build Packet</div>
+  <div class="meta">packet: v4.3 &nbsp;·&nbsp; date: 2026-05-08 &nbsp;·&nbsp; repo: <a href="https://github.com/tonykoop/siku-zampona">tonykoop/siku-zampona</a></div>
+</header>
+
+<!-- ============================================================ HERO -->
+<div class="hero-placeholder">
+  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="8" y="4" width="6" height="36" rx="2" fill="#ddeeff" stroke="#2a6db5" stroke-width="1.5"/>
+    <rect x="16" y="8" width="5" height="32" rx="2" fill="#ddeeff" stroke="#2a6db5" stroke-width="1.5"/>
+    <rect x="23" y="12" width="4" height="28" rx="2" fill="#fff0d8" stroke="#c87030" stroke-width="1.5"/>
+    <rect x="29" y="16" width="4" height="24" rx="2" fill="#ddeeff" stroke="#2a6db5" stroke-width="1.5"/>
+    <rect x="35" y="20" width="3" height="20" rx="2" fill="#fff0d8" stroke="#c87030" stroke-width="1.5"/>
+  </svg>
+  <div>Hero photo placeholder</div>
+  <div class="shot-id">HERO-03 · Zanka arka — 3/4 beauty shot</div>
+  <div class="shot-id">see photo-shotlist.md for full shot list</div>
+</div>
+
+<!-- ============================================================ PROVENANCE -->
+<section id="provenance">
+  <h2>About the Siku</h2>
+  <p>
+    The <em>siku</em> (Aymara: <em>siku'</em>) is a panpipe from the Andean Altiplano, with documented use among Aymara and Quechua peoples of Bolivia and Peru. Archaeological specimens found at Tiwanaku and Nazca sites date the instrument to at least 1500 BCE. It remains a living instrument in Aymara communities today.
+  </p>
+  <p>
+    What makes the siku distinctive is <em>yanantin</em> — the Aymara philosophy of complementary pairing. A siku is not played alone. The instrument is split into two interlocking ranks: <strong class="arka">arka</strong> (the leader, seven tubes) and <strong class="ira">ira</strong> (the follower, six tubes). Together they form a complete Mixolydian scale, but neither rank contains it alone. Two players interlock their notes in call-and-response, weaving a single melody from two halves. The music enacts a cultural value — a whole that neither part can express alone.
+  </p>
+  <div class="callout blue">
+    <strong>Build note:</strong> This is a contemporary workshop interpretation built from PVC pipe or bamboo using CNC-assisted frame fabrication. It is not a cultural artifact. See <a href="../resources.md">resources.md</a> for ethnomusicological references and provenance guidance before publishing or captioning player photos.
+  </div>
+</section>
+
+<!-- ============================================================ FAMILY -->
+<section id="family">
+  <h2>Instrument Family</h2>
+  <p>Four size classes follow the traditional Andean ensemble hierarchy — bass (Toyo), tenor (Zanka), alto (Malta), soprano (Chili). Each is a complete interlocking siku. The primary build target in this packet is the <strong>Zanka</strong> (key of C, bore ⌀0.625").</p>
+
+  <div class="family-grid">
+    <div class="family-card">
+      <div class="name">Toyo</div>
+      <div class="key">Key of G · Bass</div>
+      <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="27" fill="#f5e6c8" stroke="#555" stroke-width="1.5"/>
+        <circle cx="30" cy="30" r="20" fill="#ddeeff" stroke="#2a6db5" stroke-width="1.2"/>
+        <circle cx="30" cy="30" r="2" fill="#444"/>
+      </svg>
+      <div class="spec">
+        bore: 0.750"<br>
+        OD: 1.000"<br>
+        wall: 0.125"<br>
+        13 tubes<br>
+        longest: 22.646"
+      </div>
+    </div>
+    <div class="family-card">
+      <div class="name">Zanka</div>
+      <div class="key">Key of C · Tenor</div>
+      <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="22" fill="#f5e6c8" stroke="#555" stroke-width="1.5"/>
+        <circle cx="30" cy="30" r="17" fill="#ddeeff" stroke="#2a6db5" stroke-width="1.2"/>
+        <circle cx="30" cy="30" r="2" fill="#444"/>
+      </svg>
+      <div class="spec">
+        bore: 0.625"<br>
+        OD: 0.821"<br>
+        wall: 0.098"<br>
+        13 tubes<br>
+        longest: 16.961"
+      </div>
+    </div>
+    <div class="family-card">
+      <div class="name">Malta</div>
+      <div class="key">Key of G · Alto</div>
+      <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="18" fill="#f5e6c8" stroke="#555" stroke-width="1.5"/>
+        <circle cx="30" cy="30" r="14" fill="#ddeeff" stroke="#2a6db5" stroke-width="1.2"/>
+        <circle cx="30" cy="30" r="2" fill="#444"/>
+      </svg>
+      <div class="spec">
+        bore: 0.500"<br>
+        OD: 0.658"<br>
+        wall: 0.079"<br>
+        13 tubes<br>
+        longest: 11.315"
+      </div>
+    </div>
+    <div class="family-card">
+      <div class="name">Chili</div>
+      <div class="key">Key of A · Soprano</div>
+      <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="13" fill="#f5e6c8" stroke="#555" stroke-width="1.5"/>
+        <circle cx="30" cy="30" r="10" fill="#ddeeff" stroke="#2a6db5" stroke-width="1.2"/>
+        <circle cx="30" cy="30" r="2" fill="#444"/>
+      </svg>
+      <div class="spec">
+        bore: 0.375"<br>
+        OD: 0.493"<br>
+        wall: 0.059"<br>
+        13 tubes<br>
+        longest: 7.565"
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ TUBE LAYOUT -->
+<section id="tubes">
+  <h2>Zanka Tube Layout</h2>
+  <p>The 13 Zanka tubes span G3–E5 in a Mixolydian scale. <span class="arka">Arka rank (7 tubes)</span> carries the odd-numbered positions; <span class="ira">Ira rank (6 tubes)</span> carries the even-numbered positions.</p>
+
+  <!-- Tube visual (to-scale within this viewport) -->
+  <div class="tube-row" id="tube-viz">
+    <!-- Populated by JS below -->
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Tube ID</th>
+          <th>Rank</th>
+          <th>Note</th>
+          <th class="mono">Hz</th>
+          <th class="mono">L_calc (in)</th>
+          <th class="mono">L_cut (in)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Z-A1</td><td><span class="arka">Arka</span></td><td>G3</td><td class="mono">196.00</td><td class="mono">16.961</td><td class="mono">17.148</td></tr>
+        <tr><td>Z-I1</td><td><span class="ira">Ira</span></td><td>A3</td><td class="mono">220.00</td><td class="mono">15.076</td><td class="mono">15.264</td></tr>
+        <tr><td>Z-A2</td><td><span class="arka">Arka</span></td><td>B3</td><td class="mono">246.94</td><td class="mono">13.395</td><td class="mono">13.582</td></tr>
+        <tr><td>Z-I2</td><td><span class="ira">Ira</span></td><td>C4</td><td class="mono">261.63</td><td class="mono">12.620</td><td class="mono">12.807</td></tr>
+        <tr><td>Z-A3</td><td><span class="arka">Arka</span></td><td>D4</td><td class="mono">293.66</td><td class="mono">11.157</td><td class="mono">11.344</td></tr>
+        <tr><td>Z-I3</td><td><span class="ira">Ira</span></td><td>E4</td><td class="mono">329.63</td><td class="mono">9.878</td><td class="mono">10.065</td></tr>
+        <tr><td>Z-A4</td><td><span class="arka">Arka</span></td><td>F4</td><td class="mono">349.23</td><td class="mono">9.292</td><td class="mono">9.479</td></tr>
+        <tr><td>Z-I4</td><td><span class="ira">Ira</span></td><td>G4</td><td class="mono">392.00</td><td class="mono">8.231</td><td class="mono">8.418</td></tr>
+        <tr><td>Z-A5</td><td><span class="arka">Arka</span></td><td>A4</td><td class="mono">440.00</td><td class="mono">7.188</td><td class="mono">7.375</td></tr>
+        <tr><td>Z-I5</td><td><span class="ira">Ira</span></td><td>B4</td><td class="mono">493.88</td><td class="mono">6.447</td><td class="mono">6.635</td></tr>
+        <tr><td>Z-A6</td><td><span class="arka">Arka</span></td><td>C5</td><td class="mono">523.25</td><td class="mono">6.060</td><td class="mono">6.247</td></tr>
+        <tr><td>Z-I6</td><td><span class="ira">Ira</span></td><td>D5</td><td class="mono">587.33</td><td class="mono">5.328</td><td class="mono">5.516</td></tr>
+        <tr><td>Z-A7</td><td><span class="arka">Arka</span></td><td>E5</td><td class="mono">659.26</td><td class="mono">4.627</td><td class="mono">4.814</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="font-size:13px; color:#666; margin-top:8px;">
+    Formula: <code style="font-family:'JetBrains Mono',monospace; font-size:12px; background:#f0e8d8; padding:2px 5px; border-radius:3px;">L_calc = 13552 / (4 × f_hz) − 0.82 × 0.625</code> &nbsp;·&nbsp; L_cut = L_calc + 3/16" trim allowance &nbsp;·&nbsp; Stopped pipe; odd harmonics only.
+  </p>
+</section>
+
+<!-- ============================================================ PHYSICS -->
+<section id="physics">
+  <h2>Acoustics</h2>
+  <p>The siku is a stopped cylindrical pipe: one end open (the blow end), one end closed (beeswax plug or natural bamboo node). Stopped pipes produce only odd harmonics — 1f, 3f, 5f — giving the siku its characteristic hollow, fundamental-rich timbre.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Parameter</th><th>Value</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Speed of sound</td><td class="mono">13,552 in/s</td><td>At 68°F shop standard (c = 1129.3 ft/s)</td></tr>
+        <tr><td>End correction coefficient</td><td class="mono">0.82 × bore_ID</td><td>Empirical; bundles embouchure effects. Standard physics value is 0.3×d.</td></tr>
+        <tr><td>Tube length formula</td><td class="mono">L = c/(4f) − 0.82×d</td><td>Physical length for target frequency f (Hz)</td></tr>
+        <tr><td>Trim allowance</td><td class="mono">+3/16" (0.1875")</td><td>All L_cut values include this margin for pitch adjustment</td></tr>
+        <tr><td>Harmonic series</td><td>1f, 3f, 5f…</td><td>Odd harmonics only (stopped pipe)</td></tr>
+        <tr><td>Tuning target</td><td>A4 = 440 Hz</td><td>Equal temperament</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================================ BUILD PHASES -->
+<section id="build">
+  <h2>Build Workflow</h2>
+  <div class="phases">
+
+    <div class="phase-card">
+      <div class="phase-header">
+        <div class="phase-num">1</div>
+        <div class="phase-title">Stock Preparation &amp; Bore Verification</div>
+      </div>
+      <div class="phase-body">
+        <ul>
+          <li>Measure bore ID and OD of all incoming stock with digital calipers</li>
+          <li>Record actuals in <code>validation.csv</code> (VAL-BORE rows)</li>
+          <li>Bamboo: if bore varies &gt;0.015" along length, sort by bore class and adjust tube length per family-spec formula</li>
+          <li>PVC: verify nominal vs. actual bore (Sch40 nominal bore ≠ ID for all sizes)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-card">
+      <div class="phase-header">
+        <div class="phase-num">2</div>
+        <div class="phase-title">Tube Cutting</div>
+      </div>
+      <div class="phase-body">
+        <ul>
+          <li>Build story sticks (bamboo) or set digital stop (PVC) — see <code>cnc/setup-sheet.md §6</code></li>
+          <li>Cut all 52 tubes at L_cut lengths from <code>cut-list.csv</code></li>
+          <li>Label each tube immediately with tube ID and note name</li>
+          <li>⚠ Chili Arka-7 (F#6, 1.982"): prototype first — see <code>risks.md AC-04</code></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-card">
+      <div class="phase-header">
+        <div class="phase-num">3</div>
+        <div class="phase-title">Closed-End Sealing</div>
+      </div>
+      <div class="phase-body">
+        <ul>
+          <li>Build 4 plywood sealing stands (one per member) — see <code>cnc/setup-sheet.md §5</code></li>
+          <li>Stand tubes upright in stand; pour beeswax to 3/8" depth (Toyo/Zanka) or 1/4" depth (Malta/Chili)</li>
+          <li>Allow 30 min cure before handling</li>
+          <li>Bamboo alternative: natural node provides acoustic plug — no wax needed if node is solid and located within 1/4" of cut end</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-card">
+      <div class="phase-header">
+        <div class="phase-num">4</div>
+        <div class="phase-title">First Tuning Pass</div>
+      </div>
+      <div class="phase-body">
+        <ul>
+          <li>Play each tube into a chromatic tuner; record Hz and cents deviation in <code>validation.csv</code></li>
+          <li>Tubes should read flat (longer than needed) — expected 0–15 cents flat before trim</li>
+          <li>Mark tubes that read sharp (too short) — these are scrapped or repurposed to a higher-pitched member</li>
+          <li>Do not trim yet — all tubes must be measured first to establish baseline</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-card">
+      <div class="phase-header">
+        <div class="phase-num">5</div>
+        <div class="phase-title">Frame Rail Fabrication</div>
+      </div>
+      <div class="phase-body">
+        <ul>
+          <li>Mill frame rails to width and thickness from cherry/walnut S4S stock</li>
+          <li>Route 13 tube pockets using CNC (preferred) or router table + index stops — see <code>cnc/setup-sheet.md §1</code></li>
+          <li>Pocket width = tube OD − 0.005" (light interference); pocket depth = OD/3</li>
+          <li>Dry-fit all tubes before glue-up; confirm spacing and stepped profile</li>
+          <li>Finish rails with Danish oil before tube insertion</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-card">
+      <div class="phase-header">
+        <div class="phase-num">6</div>
+        <div class="phase-title">Assembly — Cord Binding</div>
+      </div>
+      <div class="phase-body">
+        <ul>
+          <li>Seat tubes in frame rail pockets (no glue — cord binding holds the instrument)</li>
+          <li>Start cord wrap at the top rail, working toward the bottom rail</li>
+          <li>Waxed linen or nylon cord; minimum 3 wraps per tube; finish with square knot at rail end</li>
+          <li>Arka and Ira ranks built and bound separately</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-card">
+      <div class="phase-header">
+        <div class="phase-num">7</div>
+        <div class="phase-title">Final Tuning &amp; Validation</div>
+      </div>
+      <div class="phase-body">
+        <ul>
+          <li>Trim-tune all tubes to ±5 cents — see <code>cnc/setup-sheet.md §7</code></li>
+          <li>Record final Hz and cents in <code>validation.csv</code></li>
+          <li>Acceptance criterion: all 13 tubes within ±5 cents; no tube trimmed &gt; 3/16" below L_calc</li>
+          <li>Play arka and ira together to verify interlocking scale and blend</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-card">
+      <div class="phase-header">
+        <div class="phase-num">8</div>
+        <div class="phase-title">Finishing</div>
+      </div>
+      <div class="phase-body">
+        <ul>
+          <li>Lightly sand bamboo tube ends to 400 grit; wipe with tung oil (do not fill bore)</li>
+          <li>PVC tubes: sand to 400 then spray with matte acrylic clear (optional)</li>
+          <li>Cherry/walnut rail: second coat Danish oil; buff to satin finish</li>
+          <li>Photo documentation — see <code>photo-shotlist.md</code></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================ BOM SUMMARY -->
+<section id="bom">
+  <h2>Materials Summary (Zanka)</h2>
+  <p>Full BOM in <a href="../bom.csv">bom.csv</a> · Sourcing guide in <a href="../sourcing.csv">sourcing.csv</a></p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Category</th><th>Item</th><th>Qty</th><th>Est. Cost</th><th>Primary Source</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Tubes</td><td>Bamboo cañahueca, ⌀0.821" OD × 18" sticks</td><td>16 sticks</td><td>$18–30</td><td>Etsy / bamboo flute suppliers</td></tr>
+        <tr><td>Tubes (alt)</td><td>PVC Sch40 conduit, 1/2" nominal</td><td>8 ft</td><td>$6–8</td><td>Home Depot / local hardware</td></tr>
+        <tr><td>Frame</td><td>Cherry S4S, 3/4" × 1-1/2" × 14"</td><td>4 pcs</td><td>$12–16</td><td>Local hardwood dealer</td></tr>
+        <tr><td>Sealing</td><td>Beeswax block, raw</td><td>4 oz</td><td>$4–8</td><td>Beekeeping supply / Amazon</td></tr>
+        <tr><td>Binding</td><td>Waxed linen cord, 1mm</td><td>50 ft</td><td>$4–6</td><td>Bookbinding supply</td></tr>
+        <tr><td>Finish</td><td>Danish oil, 1 pint</td><td>1</td><td>$10–14</td><td>Woodcraft / local</td></tr>
+        <tr><td>Tools</td><td>Chromatic tuner (clip or app)</td><td>1</td><td>$12–30</td><td>Guitar Center / GuitarTuna app (free)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================================ PHOTOS -->
+<section id="photos">
+  <h2>Build Photos</h2>
+  <p>Photos pending. See <a href="../photo-shotlist.md">photo-shotlist.md</a> for the full 36-shot list. Shoot on neutral grey or linen background; include ruler for scale in at least one shot per group.</p>
+
+  <div class="photo-grid">
+    <div class="photo-box">
+      <div>Raw bamboo culm</div>
+      <div class="shot-id">RAW-01</div>
+    </div>
+    <div class="photo-box">
+      <div>Bamboo cross-section</div>
+      <div class="shot-id">RAW-02</div>
+    </div>
+    <div class="photo-box">
+      <div>Story stick + tubes</div>
+      <div class="shot-id">CUT-01</div>
+    </div>
+    <div class="photo-box">
+      <div>Bore verification</div>
+      <div class="shot-id">CUT-04</div>
+    </div>
+    <div class="photo-box">
+      <div>Wax pour into tube</div>
+      <div class="shot-id">SEAL-03</div>
+    </div>
+    <div class="photo-box">
+      <div>CNC pocket routing</div>
+      <div class="shot-id">FRAME-01</div>
+    </div>
+    <div class="photo-box">
+      <div>Cord wrapping detail</div>
+      <div class="shot-id">BIND-01</div>
+    </div>
+    <div class="photo-box">
+      <div>Arka rank — complete</div>
+      <div class="shot-id">BIND-03</div>
+    </div>
+    <div class="photo-box">
+      <div>Four-family flat lay</div>
+      <div class="shot-id">HERO-01</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ DRAWINGS -->
+<section id="drawings">
+  <h2>Drawings</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Drawing</th><th>File</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Tube Cross-Section</td><td><a href="../drawings/siku-tube-section.svg">siku-tube-section.svg</a></td><td>All 4 bore/OD/wall profiles side by side</td></tr>
+        <tr><td>Zanka Elevation</td><td><a href="../drawings/siku-zanka-elevation.svg">siku-zanka-elevation.svg</a></td><td>13-tube elevation with arka/ira split, lengths, Hz</td></tr>
+        <tr><td>Family Overview</td><td><a href="../drawings/siku-family-overview.svg">siku-family-overview.svg</a></td><td>4-member side-by-side silhouette comparison</td></tr>
+        <tr><td>Toyo Elevation</td><td><a href="../drawings/siku-toyo-elevation.svg">siku-toyo-elevation.svg</a></td><td>Bass member, 13 tubes</td></tr>
+        <tr><td>Malta Elevation</td><td><a href="../drawings/siku-malta-elevation.svg">siku-malta-elevation.svg</a></td><td>Alto member, 13 tubes</td></tr>
+        <tr><td>Chili Elevation</td><td><a href="../drawings/siku-chili-elevation.svg">siku-chili-elevation.svg</a></td><td>Soprano member, 13 tubes</td></tr>
+        <tr><td>Frame Rail Detail</td><td><a href="../drawings/siku-frame-rail-detail.svg">siku-frame-rail-detail.svg</a></td><td>Pocket dimensions and spacing (Zanka)</td></tr>
+        <tr><td>Sealing Stand</td><td><a href="../drawings/siku-sealing-stand.svg">siku-sealing-stand.svg</a></td><td>Plywood stand drill pattern</td></tr>
+        <tr><td>Wax Plug Detail</td><td><a href="../drawings/siku-wax-plug-detail.svg">siku-wax-plug-detail.svg</a></td><td>Plug depth, stopped-end cross-section</td></tr>
+        <tr><td>Story Stick</td><td><a href="../drawings/siku-story-stick.svg">siku-story-stick.svg</a></td><td>Zanka story stick layout with all 13 marks</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================================ FILES -->
+<section id="files">
+  <h2>Packet Files</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>File</th><th>Type</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><a href="../design.md">design.md</a></td><td>Design</td><td>Governing model, provenance, tube length tables, physics</td></tr>
+        <tr><td><a href="../family-spec.csv">family-spec.csv</a></td><td>Data</td><td>4-row table with all tube parameters per member</td></tr>
+        <tr><td><a href="../bom.csv">bom.csv</a></td><td>Data</td><td>Full bill of materials — all 4 members + shared items</td></tr>
+        <tr><td><a href="../sourcing.csv">sourcing.csv</a></td><td>Data</td><td>Supplier options with substitute risk notes</td></tr>
+        <tr><td><a href="../cut-list.csv">cut-list.csv</a></td><td>Data</td><td>52 tube cuts + 4 rail cuts with notes</td></tr>
+        <tr><td><a href="../validation.csv">validation.csv</a></td><td>Data</td><td>Per-tube validation with target Hz, tolerance</td></tr>
+        <tr><td><a href="../assembly-manual.md">assembly-manual.md</a></td><td>Manual</td><td>8-phase build manual with tool list and safety notes</td></tr>
+        <tr><td><a href="../risks.md">risks.md</a></td><td>Risk</td><td>11 structured risks with verification tests</td></tr>
+        <tr><td><a href="../jig-decision.md">jig-decision.md</a></td><td>Decision</td><td>Fixture selection for each manufacturing operation</td></tr>
+        <tr><td><a href="../cnc/setup-sheet.md">cnc/setup-sheet.md</a></td><td>CNC</td><td>Machine setup, datums, tooling, release checks</td></tr>
+        <tr><td><a href="../cnc/operations.csv">cnc/operations.csv</a></td><td>CNC</td><td>Machine-readable operation list with all parameters</td></tr>
+        <tr><td><a href="../wolfram/instrument-model.wl">wolfram/instrument-model.wl</a></td><td>Model</td><td>Interactive Wolfram tube-length explorer and spectrum analyzer</td></tr>
+        <tr><td><a href="../resources.md">resources.md</a></td><td>Reference</td><td>Acoustic, ethnomusicological, and maker references</td></tr>
+        <tr><td><a href="../photo-shotlist.md">photo-shotlist.md</a></td><td>Photo</td><td>36-shot photo list for build log and portfolio</td></tr>
+        <tr><td><a href="../supplier-rfq.md">supplier-rfq.md</a></td><td>Sourcing</td><td>RFQ templates for bamboo, PVC, cherry, cord/wax</td></tr>
+        <tr><td><a href="../siku-zampona-design-table.xlsx">siku-zampona-design-table.xlsx</a></td><td>Spreadsheet</td><td>Master design table — all 4 members, all parameters</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================================ FOOTER -->
+<footer>
+  <div class="wordmark">Heifer Zephyr</div>
+  <p>
+    Build packet v4.3 · <a href="https://github.com/tonykoop/siku-zampona">github.com/tonykoop/siku-zampona</a><br>
+    License: CC BY 4.0 (engineering documentation only — not a claim of cultural ownership).<br>
+    The siku is an Aymara instrument. See <a href="../resources.md">resources.md §Provenance</a> before publishing.
+  </p>
+</footer>
+
+<!-- ============================================================ JS: tube visualizer -->
+<script>
+(function() {
+  const tubes = [
+    { id:'Z-A1', rank:'arka', note:'G3', hz:196.00,  lcut:17.148 },
+    { id:'Z-I1', rank:'ira',  note:'A3', hz:220.00,  lcut:15.264 },
+    { id:'Z-A2', rank:'arka', note:'B3', hz:246.94,  lcut:13.582 },
+    { id:'Z-I2', rank:'ira',  note:'C4', hz:261.63,  lcut:12.807 },
+    { id:'Z-A3', rank:'arka', note:'D4', hz:293.66,  lcut:11.344 },
+    { id:'Z-I3', rank:'ira',  note:'E4', hz:329.63,  lcut:10.065 },
+    { id:'Z-A4', rank:'arka', note:'F4', hz:349.23,  lcut: 9.479 },
+    { id:'Z-I4', rank:'ira',  note:'G4', hz:392.00,  lcut: 8.418 },
+    { id:'Z-A5', rank:'arka', note:'A4', hz:440.00,  lcut: 7.375 },
+    { id:'Z-I5', rank:'ira',  note:'B4', hz:493.88,  lcut: 6.635 },
+    { id:'Z-A6', rank:'arka', note:'C5', hz:523.25,  lcut: 6.247 },
+    { id:'Z-I6', rank:'ira',  note:'D5', hz:587.33,  lcut: 5.516 },
+    { id:'Z-A7', rank:'arka', note:'E5', hz:659.26,  lcut: 4.814 },
+  ];
+
+  const maxLen = Math.max(...tubes.map(t => t.lcut));
+  const scale = 5; // px per inch
+  const container = document.getElementById('tube-viz');
+
+  tubes.forEach(t => {
+    const div = document.createElement('div');
+    div.className = 'tube ' + t.rank + '-tube';
+
+    const bar = document.createElement('div');
+    bar.className = 'tube-bar';
+    bar.style.height = Math.round(t.lcut * scale) + 'px';
+
+    const lbl = document.createElement('div');
+    lbl.className = 'tube-label';
+    lbl.innerHTML = t.note + '<br>' + t.lcut.toFixed(2) + '"';
+
+    div.appendChild(bar);
+    div.appendChild(lbl);
+    container.appendChild(div);
+  });
+})();
+</script>
+
+</body>
+</html>

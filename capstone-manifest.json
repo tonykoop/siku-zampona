@@ -1,0 +1,90 @@
+{
+  "instrument": "Siku (Zampoña)",
+  "instrument_id": "siku-zampona",
+  "skill_version": "v4.3",
+  "packet_mode": "root",
+  "generated": "2026-05-08",
+  "repo": "tonykoop/siku-zampona",
+  "brand": "Heifer Zephyr",
+  "license": "CC BY 4.0",
+
+  "family": {
+    "members": ["Toyo", "Zanka", "Malta", "Chili"],
+    "primary_build_target": "Zanka",
+    "scale": "G Mixolydian",
+    "tuning_standard": "A4=440Hz",
+    "split": "arka_ira"
+  },
+
+  "acoustics": {
+    "pipe_type": "stopped_cylindrical",
+    "speed_of_sound_in_per_s": 13552.0,
+    "end_correction_coefficient": 0.82,
+    "end_correction_type": "empirical",
+    "harmonics": "odd_only",
+    "tube_length_formula": "L_calc = c/(4*f) - 0.82*bore_id",
+    "trim_allowance_in": 0.1875
+  },
+
+  "deliverables": {
+    "design_doc":        { "file": "design.md",                  "status": "complete" },
+    "family_spec":       { "file": "family-spec.csv",            "status": "complete", "rows": 4 },
+    "bom":               { "file": "bom.csv",                    "status": "complete", "rows": 29 },
+    "sourcing":          { "file": "sourcing.csv",               "status": "complete" },
+    "cut_list":          { "file": "cut-list.csv",               "status": "complete", "rows": 56 },
+    "validation":        { "file": "validation.csv",             "status": "complete", "rows": 55 },
+    "assembly_manual":   { "file": "assembly-manual.md",         "status": "complete", "phases": 8 },
+    "risks":             { "file": "risks.md",                   "status": "complete", "count": 11 },
+    "jig_decision":      { "file": "jig-decision.md",            "status": "complete", "decisions": 5 },
+    "cnc_setup":         { "file": "cnc/setup-sheet.md",         "status": "complete" },
+    "cnc_operations":    { "file": "cnc/operations.csv",         "status": "complete", "rows": 20 },
+    "wolfram_model":     { "file": "wolfram/instrument-model.wl","status": "complete" },
+    "wolfram_starter":   { "file": "wolfram-starter.wl",         "status": "complete" },
+    "capstone_deck":     { "file": "capstone-deck.md",           "status": "complete", "slides": 15 },
+    "print_packet_md":   { "file": "print-packet.md",            "status": "complete" },
+    "print_packet_html": { "file": "print-packet.html",          "status": "complete" },
+    "print_packet_pdf":  { "file": "print-packet.pdf",           "status": "pending" },
+    "capstone_pptx":     { "file": "capstone-deck.pptx",         "status": "pending" },
+    "resources":         { "file": "resources.md",               "status": "complete" },
+    "photo_shotlist":    { "file": "photo-shotlist.md",          "status": "complete", "shots": 36 },
+    "supplier_rfq":      { "file": "supplier-rfq.md",            "status": "complete" },
+    "site":              { "file": "site/index.html",            "status": "complete" },
+    "readme":            { "file": "README.md",                  "status": "complete" },
+    "design_table":      { "file": "siku-zampona-design-table.xlsx", "status": "existing" },
+    "drawings": {
+      "status": "complete",
+      "count": 10,
+      "files": [
+        "drawings/siku-tube-section.svg",
+        "drawings/siku-zanka-elevation.svg",
+        "drawings/siku-toyo-elevation.svg",
+        "drawings/siku-malta-elevation.svg",
+        "drawings/siku-chili-elevation.svg",
+        "drawings/siku-family-overview.svg",
+        "drawings/siku-frame-rail-detail.svg",
+        "drawings/siku-sealing-stand.svg",
+        "drawings/siku-wax-plug-detail.svg",
+        "drawings/siku-story-stick.svg"
+      ]
+    }
+  },
+
+  "open_items": [
+    { "id": "OI-01", "severity": "H", "description": "print-packet.pdf pending — needs PDF render from print-packet.html" },
+    { "id": "OI-02", "severity": "M", "description": "capstone-deck.pptx pending — needs PPTX render from capstone-deck.md" },
+    { "id": "OI-03", "severity": "M", "description": "Photos: all 36 shots in photo-shotlist.md pending actual build" },
+    { "id": "OI-04", "severity": "M", "description": "Chili Arka-7 (F#6, 1.982\") prototype build required — see risks.md AC-04" },
+    { "id": "OI-05", "severity": "L", "description": "OpenSCAD model: cad/siku-openscad-starter.scad TBD per drawing-brief.md" },
+    { "id": "OI-06", "severity": "L", "description": "Wolfram audio recordings: AudioGenerator output for arka+ira ranks TBD" }
+  ],
+
+  "validator": {
+    "script": "validate_packet.py",
+    "last_run": "2026-05-08",
+    "mode": "root",
+    "findings_at_run": [
+      "print-packet.pdf missing (pending PDF render)",
+      "capstone-deck.pptx missing (pending PPTX render)"
+    ]
+  }
+}

@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siku (Zampoña) — Print Packet · Heifer Zephyr</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap');
+:root {
+  --cream:#fdf8f0; --brown:#7a5c38; --dark:#2a1f14; --rule:#d0c0a0;
+  --blue:#2a6db5; --orange:#c87030;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;font-size:13px;line-height:1.55;
+  background:white;color:var(--dark);max-width:800px;margin:0 auto;padding:20px 32px 60px}
+h1{font-family:'Fraunces',serif;font-size:22px;font-weight:700;
+  border-bottom:2px solid var(--brown);padding-bottom:8px;margin:24px 0 12px}
+h2{font-family:'Fraunces',serif;font-size:16px;font-weight:700;
+  border-bottom:1px solid var(--rule);padding-bottom:5px;margin:20px 0 10px;color:var(--brown)}
+h3{font-size:13px;font-weight:600;margin:16px 0 8px;text-transform:uppercase;
+  letter-spacing:.05em;color:var(--brown)}
+p{margin-bottom:10px}
+table{width:100%;border-collapse:collapse;font-size:12px;margin:10px 0;font-family:'JetBrains Mono',monospace}
+th{background:#f0e8d8;padding:5px 10px;text-align:left;border-bottom:2px solid var(--rule);
+  font-size:10px;letter-spacing:.04em;color:var(--brown)}
+td{padding:4px 10px;border-bottom:1px solid #e8e0d0}
+tr:last-child td{border-bottom:none}
+code{font-family:'JetBrains Mono',monospace;font-size:12px;background:#f0e8d0;
+  padding:1px 5px;border-radius:3px}
+pre{background:#f0e8d0;padding:12px;border-radius:4px;overflow-x:auto;margin:10px 0}
+pre code{background:none;padding:0}
+strong{font-weight:600}
+ul,ol{padding-left:20px;margin-bottom:10px}
+li{margin-bottom:3px}
+blockquote{border-left:3px solid var(--brown);padding-left:12px;color:#666;margin:10px 0}
+@media print {
+  body{max-width:none;padding:10px 20px}
+  h1{page-break-before:always}
+  h1:first-of-type{page-break-before:avoid}
+  table{font-size:11px}
+}
+</style>
+</head>
+<body>
+<h1>Siku (Zampoña) — Print Packet</h1>
+<p><strong>Heifer Zephyr · instrument-maker-v4 · packet v4.3 · 2026-05-08</strong><br />
+<strong>Instrument:</strong> Siku (Zampoña) — Andean Panpipe, Four-Member Family<br />
+<strong>Primary build target:</strong> Zanka (key of C, tenor, bore ⌀0.625")</p>
+<hr />
+<h2>Quick Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tube length formula</td>
+<td><code>L_calc = 13552 / (4 × f_hz) − 0.82 × bore_ID</code></td>
+</tr>
+<tr>
+<td>Trim allowance</td>
+<td><code>L_cut = L_calc + 3/16"</code></td>
+</tr>
+<tr>
+<td>Speed of sound</td>
+<td>13,552 in/s at 68°F</td>
+</tr>
+<tr>
+<td>Tuning standard</td>
+<td>A4 = 440 Hz, equal temperament</td>
+</tr>
+<tr>
+<td>End correction</td>
+<td>0.82 × bore_ID (empirical)</td>
+</tr>
+<tr>
+<td>Pipe type</td>
+<td>Stopped cylindrical; odd harmonics only (1f, 3f, 5f…)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Family Tube Dimensions</h2>
+<h3>Toyo (Bass · G3 root · bore 0.750" · OD 1.000")</h3>
+<table>
+<thead>
+<tr>
+<th>Tube ID</th>
+<th>Rank</th>
+<th>Note</th>
+<th>Hz</th>
+<th>L_calc (in)</th>
+<th>L_cut (in)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T-A1</td>
+<td>Arka</td>
+<td>G3</td>
+<td>196.00</td>
+<td>22.459</td>
+<td>22.646</td>
+</tr>
+<tr>
+<td>T-I1</td>
+<td>Ira</td>
+<td>A3</td>
+<td>220.00</td>
+<td>19.958</td>
+<td>20.146</td>
+</tr>
+<tr>
+<td>T-A2</td>
+<td>Arka</td>
+<td>B3</td>
+<td>246.94</td>
+<td>17.742</td>
+<td>17.929</td>
+</tr>
+<tr>
+<td>T-I2</td>
+<td>Ira</td>
+<td>C4</td>
+<td>261.63</td>
+<td>16.709</td>
+<td>16.896</td>
+</tr>
+<tr>
+<td>T-A3</td>
+<td>Arka</td>
+<td>D4</td>
+<td>293.66</td>
+<td>14.820</td>
+<td>15.007</td>
+</tr>
+<tr>
+<td>T-I3</td>
+<td>Ira</td>
+<td>E4</td>
+<td>329.63</td>
+<td>13.139</td>
+<td>13.327</td>
+</tr>
+<tr>
+<td>T-A4</td>
+<td>Arka</td>
+<td>F4</td>
+<td>349.23</td>
+<td>12.378</td>
+<td>12.565</td>
+</tr>
+<tr>
+<td>T-I4</td>
+<td>Ira</td>
+<td>G4</td>
+<td>392.00</td>
+<td>10.979</td>
+<td>11.166</td>
+</tr>
+<tr>
+<td>T-A5</td>
+<td>Arka</td>
+<td>A4</td>
+<td>440.00</td>
+<td>9.629</td>
+<td>9.817</td>
+</tr>
+<tr>
+<td>T-I5</td>
+<td>Ira</td>
+<td>B4</td>
+<td>493.88</td>
+<td>8.546</td>
+<td>8.733</td>
+</tr>
+<tr>
+<td>T-A6</td>
+<td>Arka</td>
+<td>C5</td>
+<td>523.25</td>
+<td>8.054</td>
+<td>8.242</td>
+</tr>
+<tr>
+<td>T-I6</td>
+<td>Ira</td>
+<td>D5</td>
+<td>587.33</td>
+<td>7.128</td>
+<td>7.315</td>
+</tr>
+<tr>
+<td>T-A7</td>
+<td>Arka</td>
+<td>E5</td>
+<td>659.26</td>
+<td>6.267</td>
+<td>6.455</td>
+</tr>
+</tbody>
+</table>
+<p>Frame width (Toyo): <strong>13.750"</strong> · Pocket pitch: 1.063" C-C · Pocket width: 0.995"</p>
+<hr />
+<h3>Zanka (Tenor · C4 root · bore 0.625" · OD 0.821") ← Primary Build</h3>
+<table>
+<thead>
+<tr>
+<th>Tube ID</th>
+<th>Rank</th>
+<th>Note</th>
+<th>Hz</th>
+<th>L_calc (in)</th>
+<th>L_cut (in)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Z-A1</td>
+<td>Arka</td>
+<td>G3</td>
+<td>196.00</td>
+<td>16.961</td>
+<td>17.148</td>
+</tr>
+<tr>
+<td>Z-I1</td>
+<td>Ira</td>
+<td>A3</td>
+<td>220.00</td>
+<td>15.076</td>
+<td>15.264</td>
+</tr>
+<tr>
+<td>Z-A2</td>
+<td>Arka</td>
+<td>B3</td>
+<td>246.94</td>
+<td>13.395</td>
+<td>13.582</td>
+</tr>
+<tr>
+<td>Z-I2</td>
+<td>Ira</td>
+<td>C4</td>
+<td>261.63</td>
+<td>12.620</td>
+<td>12.807</td>
+</tr>
+<tr>
+<td>Z-A3</td>
+<td>Arka</td>
+<td>D4</td>
+<td>293.66</td>
+<td>11.157</td>
+<td>11.344</td>
+</tr>
+<tr>
+<td>Z-I3</td>
+<td>Ira</td>
+<td>E4</td>
+<td>329.63</td>
+<td>9.878</td>
+<td>10.065</td>
+</tr>
+<tr>
+<td>Z-A4</td>
+<td>Arka</td>
+<td>F4</td>
+<td>349.23</td>
+<td>9.292</td>
+<td>9.479</td>
+</tr>
+<tr>
+<td>Z-I4</td>
+<td>Ira</td>
+<td>G4</td>
+<td>392.00</td>
+<td>8.231</td>
+<td>8.418</td>
+</tr>
+<tr>
+<td>Z-A5</td>
+<td>Arka</td>
+<td>A4</td>
+<td>440.00</td>
+<td>7.188</td>
+<td>7.375</td>
+</tr>
+<tr>
+<td>Z-I5</td>
+<td>Ira</td>
+<td>B4</td>
+<td>493.88</td>
+<td>6.447</td>
+<td>6.635</td>
+</tr>
+<tr>
+<td>Z-A6</td>
+<td>Arka</td>
+<td>C5</td>
+<td>523.25</td>
+<td>6.060</td>
+<td>6.247</td>
+</tr>
+<tr>
+<td>Z-I6</td>
+<td>Ira</td>
+<td>D5</td>
+<td>587.33</td>
+<td>5.328</td>
+<td>5.516</td>
+</tr>
+<tr>
+<td>Z-A7</td>
+<td>Arka</td>
+<td>E5</td>
+<td>659.26</td>
+<td>4.627</td>
+<td>4.814</td>
+</tr>
+</tbody>
+</table>
+<p>Frame width (Zanka): <strong>11.423"</strong> · Pocket pitch: 0.884" C-C · Pocket width: 0.816"</p>
+<hr />
+<h3>Malta (Alto · G4 root · bore 0.500" · OD 0.658")</h3>
+<table>
+<thead>
+<tr>
+<th>Tube ID</th>
+<th>Rank</th>
+<th>Note</th>
+<th>Hz</th>
+<th>L_calc (in)</th>
+<th>L_cut (in)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-A1</td>
+<td>Arka</td>
+<td>G4</td>
+<td>392.00</td>
+<td>7.565</td>
+<td>7.752</td>
+</tr>
+<tr>
+<td>M-I1</td>
+<td>Ira</td>
+<td>A4</td>
+<td>440.00</td>
+<td>6.728</td>
+<td>6.915</td>
+</tr>
+<tr>
+<td>M-A2</td>
+<td>Arka</td>
+<td>B4</td>
+<td>493.88</td>
+<td>5.971</td>
+<td>6.158</td>
+</tr>
+<tr>
+<td>M-I2</td>
+<td>Ira</td>
+<td>C5</td>
+<td>523.25</td>
+<td>5.638</td>
+<td>5.826</td>
+</tr>
+<tr>
+<td>M-A3</td>
+<td>Arka</td>
+<td>D5</td>
+<td>587.33</td>
+<td>4.978</td>
+<td>5.165</td>
+</tr>
+<tr>
+<td>M-I3</td>
+<td>Ira</td>
+<td>E5</td>
+<td>659.26</td>
+<td>4.389</td>
+<td>4.576</td>
+</tr>
+<tr>
+<td>M-A4</td>
+<td>Arka</td>
+<td>F5</td>
+<td>698.46</td>
+<td>4.144</td>
+<td>4.332</td>
+</tr>
+<tr>
+<td>M-I4</td>
+<td>Ira</td>
+<td>G5</td>
+<td>783.99</td>
+<td>3.624</td>
+<td>3.811</td>
+</tr>
+<tr>
+<td>M-A5</td>
+<td>Arka</td>
+<td>A5</td>
+<td>880.00</td>
+<td>3.214</td>
+<td>3.401</td>
+</tr>
+<tr>
+<td>M-I5</td>
+<td>Ira</td>
+<td>B5</td>
+<td>987.77</td>
+<td>2.823</td>
+<td>3.010</td>
+</tr>
+<tr>
+<td>M-A6</td>
+<td>Arka</td>
+<td>C6</td>
+<td>1046.50</td>
+<td>2.669</td>
+<td>2.857</td>
+</tr>
+<tr>
+<td>M-I6</td>
+<td>Ira</td>
+<td>D6</td>
+<td>1174.66</td>
+<td>2.339</td>
+<td>2.526</td>
+</tr>
+<tr>
+<td>M-A7</td>
+<td>Arka</td>
+<td>E6</td>
+<td>1318.51</td>
+<td>2.074</td>
+<td>2.261</td>
+</tr>
+</tbody>
+</table>
+<p>Frame width (Malta): <strong>9.304"</strong> · Pocket pitch: 0.721" C-C · Pocket width: 0.653"</p>
+<hr />
+<h3>Chili (Soprano · A4 root · bore 0.375" · OD 0.493")</h3>
+<table>
+<thead>
+<tr>
+<th>Tube ID</th>
+<th>Rank</th>
+<th>Note</th>
+<th>Hz</th>
+<th>L_calc (in)</th>
+<th>L_cut (in)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C-A1</td>
+<td>Arka</td>
+<td>A4</td>
+<td>440.00</td>
+<td>7.565</td>
+<td>7.752</td>
+</tr>
+<tr>
+<td>C-I1</td>
+<td>Ira</td>
+<td>B4</td>
+<td>493.88</td>
+<td>6.728</td>
+<td>6.915</td>
+</tr>
+<tr>
+<td>C-A2</td>
+<td>Arka</td>
+<td>C#5</td>
+<td>554.37</td>
+<td>5.971</td>
+<td>6.158</td>
+</tr>
+<tr>
+<td>C-I2</td>
+<td>Ira</td>
+<td>D5</td>
+<td>587.33</td>
+<td>5.638</td>
+<td>5.826</td>
+</tr>
+<tr>
+<td>C-A3</td>
+<td>Arka</td>
+<td>E5</td>
+<td>659.26</td>
+<td>4.978</td>
+<td>5.165</td>
+</tr>
+<tr>
+<td>C-I3</td>
+<td>Ira</td>
+<td>F#5</td>
+<td>739.99</td>
+<td>4.389</td>
+<td>4.576</td>
+</tr>
+<tr>
+<td>C-A4</td>
+<td>Arka</td>
+<td>G5</td>
+<td>783.99</td>
+<td>4.144</td>
+<td>4.332</td>
+</tr>
+<tr>
+<td>C-I4</td>
+<td>Ira</td>
+<td>A5</td>
+<td>880.00</td>
+<td>3.624</td>
+<td>3.811</td>
+</tr>
+<tr>
+<td>C-A5</td>
+<td>Arka</td>
+<td>B5</td>
+<td>987.77</td>
+<td>3.214</td>
+<td>3.401</td>
+</tr>
+<tr>
+<td>C-I5</td>
+<td>Ira</td>
+<td>C#6</td>
+<td>1108.73</td>
+<td>2.823</td>
+<td>3.010</td>
+</tr>
+<tr>
+<td>C-A6</td>
+<td>Arka</td>
+<td>D6</td>
+<td>1174.66</td>
+<td>2.669</td>
+<td>2.857</td>
+</tr>
+<tr>
+<td>C-I6</td>
+<td>Ira</td>
+<td>E6</td>
+<td>1318.51</td>
+<td>2.339</td>
+<td>2.526</td>
+</tr>
+<tr>
+<td>C-A7</td>
+<td>Arka</td>
+<td>F#6</td>
+<td>1479.98</td>
+<td>1.982</td>
+<td>2.170</td>
+</tr>
+</tbody>
+</table>
+<p>Frame width (Chili): <strong>7.159"</strong> · Pocket pitch: 0.556" C-C · Pocket width: 0.488"</p>
+<p><strong>⚠ C-A7 (F#6, L_cut = 2.170") is at the practical playability limit. Prototype this tube first before committing production stock. Consider building Chili as 11 tubes (omit C-A7 and C-I6).</strong></p>
+<hr />
+<h2>CNC Rail Parameters (All Members)</h2>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>OD</th>
+<th>Pocket Width</th>
+<th>Pocket Depth</th>
+<th>Pocket Pitch</th>
+<th>First Center</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toyo</td>
+<td>1.000"</td>
+<td>0.995"</td>
+<td>0.333"</td>
+<td>1.063"</td>
+<td>0.500"</td>
+</tr>
+<tr>
+<td>Zanka</td>
+<td>0.821"</td>
+<td>0.816"</td>
+<td>0.274"</td>
+<td>0.884"</td>
+<td>0.411"</td>
+</tr>
+<tr>
+<td>Malta</td>
+<td>0.658"</td>
+<td>0.653"</td>
+<td>0.219"</td>
+<td>0.721"</td>
+<td>0.329"</td>
+</tr>
+<tr>
+<td>Chili</td>
+<td>0.493"</td>
+<td>0.488"</td>
+<td>0.164"</td>
+<td>0.556"</td>
+<td>0.247"</td>
+</tr>
+</tbody>
+</table>
+<p>Pocket depth = OD/3 · Pocket pitch = OD + 1/16" · Z0 = top of stock</p>
+<hr />
+<h2>Tube Sealing — Beeswax Plug Depths</h2>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Plug Depth</th>
+<th>Stand Hole ⌀</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toyo</td>
+<td>3/8"</td>
+<td>1.010"</td>
+</tr>
+<tr>
+<td>Zanka</td>
+<td>3/8"</td>
+<td>0.831"</td>
+</tr>
+<tr>
+<td>Malta</td>
+<td>1/4"</td>
+<td>0.668"</td>
+</tr>
+<tr>
+<td>Chili</td>
+<td>1/4"</td>
+<td>0.503"</td>
+</tr>
+</tbody>
+</table>
+<p>Pour beeswax at 160°F. Allow 30 min cure before handling.</p>
+<hr />
+<h2>Tuning Acceptance Criteria</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pitch tolerance</td>
+<td>±5 cents of target frequency</td>
+</tr>
+<tr>
+<td>Maximum trim</td>
+<td>≤ 3/16" below L_calc (scrap if exceeded)</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>Measure and trim at same temperature</td>
+</tr>
+<tr>
+<td>Reference</td>
+<td>A4 = 440 Hz on calibrated chromatic tuner</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Material Shortlist (Zanka Build Only)</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Spec</th>
+<th>Qty</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bamboo tube stock</td>
+<td>~0.821" OD / 0.625" bore; 18" sticks</td>
+<td>16 sticks</td>
+<td>Cañahueca preferred; sort by bore before cutting</td>
+</tr>
+<tr>
+<td>Cherry S4S</td>
+<td>3/4" × 1.5" × 12.5"</td>
+<td>4 pcs (2 rails × 2 ranks)</td>
+<td>Can also use walnut</td>
+</tr>
+<tr>
+<td>Beeswax</td>
+<td>4 oz block</td>
+<td>1</td>
+<td>Shared with other members</td>
+</tr>
+<tr>
+<td>Waxed linen cord</td>
+<td>1mm, ~80 ft</td>
+<td>1 spool</td>
+<td>Nylon acceptable</td>
+</tr>
+<tr>
+<td>Danish oil</td>
+<td>1 pint</td>
+<td>1</td>
+<td>For cherry rails</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Assembly Checklist</h2>
+<ul>
+<li>[ ] Bore ID verified within +0.000" / −0.010" of target for all tubes</li>
+<li>[ ] All 13 tubes cut to L_cut lengths from this table; labeled with tube ID</li>
+<li>[ ] Sealing stand built (Zanka: 13 holes at 0.831" ⌀, spaced 0.884" C-C)</li>
+<li>[ ] Beeswax plugs poured and cured</li>
+<li>[ ] First-pass tuning complete; all deviations recorded in validation.csv</li>
+<li>[ ] Frame rails milled; pocket width verified with first pocket before batch</li>
+<li>[ ] Dry-fit assembly confirmed; all 13 tubes seat in pockets</li>
+<li>[ ] Cord binding complete; square-knot finish at both rail ends</li>
+<li>[ ] Final tuning: all 13 tubes ±5 cents; validation.csv updated</li>
+<li>[ ] Rails finished with Danish oil; tubes wiped with tung oil</li>
+</ul>
+<hr />
+<h2>Notes</h2>
+<ul>
+<li>This print packet covers Zanka as primary build. Use family-spec.csv for all 4 members.</li>
+<li>Tube lengths in this table are L_cut (include 3/16" trim allowance). Never cut shorter than L_calc.</li>
+<li>Story stick: mark all 13 tube lengths on a 1/4" × 1" × 18" MDF strip before cutting.</li>
+<li>Keep validation.csv open during the entire build and fill in measured_hz after each tuning pass.</li>
+<li>See resources.md §Provenance before writing any public-facing documentation.</li>
+</ul>
+<hr />
+<p><em>Packet v4.3 · tonykoop/siku-zampona · CC BY 4.0 · Heifer Zephyr</em></p>
+<hr style="border:none;border-top:1px solid #d0c0a0;margin:40px 0 16px">
+<p style="font-size:11px;color:#888">Siku (Zampoña) · packet v4.3 · tonykoop/siku-zampona · CC BY 4.0 · Heifer Zephyr</p>
+</body>
+</html>

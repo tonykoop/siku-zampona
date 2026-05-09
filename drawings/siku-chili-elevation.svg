@@ -1,0 +1,114 @@
+<svg viewBox="0 0 253 316" xmlns="http://www.w3.org/2000/svg" width="253" height="316">
+<rect width="100%" height="100%" fill="white"/>
+<line x1="55" y1="65" x2="218" y2="65" stroke="#cc0000" stroke-width="1.5" stroke-dasharray="10,5"/>
+<text x="52" y="59" font-family="monospace" font-size="9" fill="#cc0000" text-anchor="end">DATUM Y=0</text>
+<text x="52" y="69" font-family="monospace" font-size="9" fill="#cc0000" text-anchor="end">(BLOW END)</text>
+<text x="108" y="43" font-family="monospace" font-size="10" font-weight="bold" fill="#2a6db5" text-anchor="middle">ARKA ♀  (7 tubes)</text>
+<text x="180" y="43" font-family="monospace" font-size="10" font-weight="bold" fill="#c46a00" text-anchor="middle">IRA ♂  (6 tubes)</text>
+<line x1="147.1" y1="50" x2="147.1" y2="226.6" stroke="#ddd" stroke-width="1.5" stroke-dasharray="5,5"/>
+<rect x="70.0" y="65.0" width="9.9" height="151.6" fill="#2a6db5" fill-opacity="0.15" stroke="#2a6db5" stroke-width="1.5"/>
+<line x1="74.9" y1="65" x2="74.9" y2="216.6" stroke="#2a6db5" stroke-width="0.6" stroke-dasharray="5,4" opacity="0.5"/>
+<text transform="rotate(-90,74.9,140.8)" x="74.9" y="140.8" font-family="monospace" font-size="9" fill="#2a6db5" text-anchor="middle" font-weight="bold">A4</text>
+<text transform="rotate(-90,74.9,83)" x="74.9" y="83" font-family="monospace" font-size="7" fill="#2a6db5" text-anchor="middle" opacity="0.8">440Hz</text>
+<line x1="74.9" y1="216.6" x2="74.9" y2="224.6" stroke="#666" stroke-width="0.8"/>
+<text x="74.9" y="234.6" font-family="monospace" font-size="8" fill="#333" text-anchor="middle">7.580"</text>
+<text x="74.9" y="246.6" font-family="monospace" font-size="8" fill="#2a6db5" text-anchor="middle">A1</text>
+<rect x="81.1" y="65.0" width="9.9" height="119.8" fill="#2a6db5" fill-opacity="0.15" stroke="#2a6db5" stroke-width="1.5"/>
+<line x1="86.0" y1="65" x2="86.0" y2="184.8" stroke="#2a6db5" stroke-width="0.6" stroke-dasharray="5,4" opacity="0.5"/>
+<text transform="rotate(-90,86.0,124.9)" x="86.0" y="124.9" font-family="monospace" font-size="9" fill="#2a6db5" text-anchor="middle" font-weight="bold">C#5</text>
+<text transform="rotate(-90,86.0,83)" x="86.0" y="83" font-family="monospace" font-size="7" fill="#2a6db5" text-anchor="middle" opacity="0.8">554Hz</text>
+<line x1="86.0" y1="184.8" x2="86.0" y2="192.8" stroke="#666" stroke-width="0.8"/>
+<text x="86.0" y="202.8" font-family="monospace" font-size="8" fill="#333" text-anchor="middle">5.991"</text>
+<text x="86.0" y="214.8" font-family="monospace" font-size="8" fill="#2a6db5" text-anchor="middle">A2</text>
+<rect x="92.2" y="65.0" width="9.9" height="100.4" fill="#2a6db5" fill-opacity="0.15" stroke="#2a6db5" stroke-width="1.5"/>
+<line x1="97.2" y1="65" x2="97.2" y2="165.4" stroke="#2a6db5" stroke-width="0.6" stroke-dasharray="5,4" opacity="0.5"/>
+<text transform="rotate(-90,97.2,115.2)" x="97.2" y="115.2" font-family="monospace" font-size="9" fill="#2a6db5" text-anchor="middle" font-weight="bold">E5</text>
+<text transform="rotate(-90,97.2,83)" x="97.2" y="83" font-family="monospace" font-size="7" fill="#2a6db5" text-anchor="middle" opacity="0.8">659Hz</text>
+<line x1="97.2" y1="165.4" x2="97.2" y2="173.4" stroke="#666" stroke-width="0.8"/>
+<text x="97.2" y="183.4" font-family="monospace" font-size="8" fill="#333" text-anchor="middle">5.019"</text>
+<text x="97.2" y="195.4" font-family="monospace" font-size="8" fill="#2a6db5" text-anchor="middle">A3</text>
+<rect x="103.3" y="65.0" width="9.9" height="84.0" fill="#2a6db5" fill-opacity="0.15" stroke="#2a6db5" stroke-width="1.5"/>
+<line x1="108.3" y1="65" x2="108.3" y2="149.0" stroke="#2a6db5" stroke-width="0.6" stroke-dasharray="5,4" opacity="0.5"/>
+<text transform="rotate(-90,108.3,107.0)" x="108.3" y="107.0" font-family="monospace" font-size="9" fill="#2a6db5" text-anchor="middle" font-weight="bold">G5</text>
+<text transform="rotate(-90,108.3,83)" x="108.3" y="83" font-family="monospace" font-size="7" fill="#2a6db5" text-anchor="middle" opacity="0.8">784Hz</text>
+<line x1="108.3" y1="149.0" x2="108.3" y2="157.0" stroke="#666" stroke-width="0.8"/>
+<text x="108.3" y="167.0" font-family="monospace" font-size="8" fill="#333" text-anchor="middle">4.201"</text>
+<text x="108.3" y="179.0" font-family="monospace" font-size="8" fill="#2a6db5" text-anchor="middle">A4</text>
+<rect x="114.4" y="65.0" width="9.9" height="66.2" fill="#2a6db5" fill-opacity="0.15" stroke="#2a6db5" stroke-width="1.5"/>
+<line x1="119.4" y1="65" x2="119.4" y2="131.2" stroke="#2a6db5" stroke-width="0.6" stroke-dasharray="5,4" opacity="0.5"/>
+<text transform="rotate(-90,119.4,98.1)" x="119.4" y="98.1" font-family="monospace" font-size="9" fill="#2a6db5" text-anchor="middle" font-weight="bold">B5</text>
+<text transform="rotate(-90,119.4,83)" x="119.4" y="83" font-family="monospace" font-size="7" fill="#2a6db5" text-anchor="middle" opacity="0.8">988Hz</text>
+<line x1="119.4" y1="131.2" x2="119.4" y2="139.2" stroke="#666" stroke-width="0.8"/>
+<text x="119.4" y="149.2" font-family="monospace" font-size="8" fill="#333" text-anchor="middle">3.310"</text>
+<text x="119.4" y="161.2" font-family="monospace" font-size="8" fill="#2a6db5" text-anchor="middle">A5</text>
+<rect x="125.5" y="65.0" width="9.9" height="55.3" fill="#2a6db5" fill-opacity="0.15" stroke="#2a6db5" stroke-width="1.5"/>
+<line x1="130.5" y1="65" x2="130.5" y2="120.3" stroke="#2a6db5" stroke-width="0.6" stroke-dasharray="5,4" opacity="0.5"/>
+<text transform="rotate(-90,130.5,92.6)" x="130.5" y="92.6" font-family="monospace" font-size="9" fill="#2a6db5" text-anchor="middle" font-weight="bold">D6</text>
+<text transform="rotate(-90,130.5,83)" x="130.5" y="83" font-family="monospace" font-size="7" fill="#2a6db5" text-anchor="middle" opacity="0.8">1175Hz</text>
+<line x1="130.5" y1="120.3" x2="130.5" y2="128.3" stroke="#666" stroke-width="0.8"/>
+<text x="130.5" y="138.3" font-family="monospace" font-size="8" fill="#333" text-anchor="middle">2.764"</text>
+<text x="130.5" y="150.3" font-family="monospace" font-size="8" fill="#2a6db5" text-anchor="middle">A6</text>
+<rect x="136.7" y="65.0" width="9.9" height="43.4" fill="#2a6db5" fill-opacity="0.15" stroke="#2a6db5" stroke-width="1.5"/>
+<line x1="141.6" y1="65" x2="141.6" y2="108.4" stroke="#2a6db5" stroke-width="0.6" stroke-dasharray="5,4" opacity="0.5"/>
+<text transform="rotate(-90,141.6,86.7)" x="141.6" y="86.7" font-family="monospace" font-size="9" fill="#2a6db5" text-anchor="middle" font-weight="bold">F#6</text>
+<text transform="rotate(-90,141.6,83)" x="141.6" y="83" font-family="monospace" font-size="7" fill="#2a6db5" text-anchor="middle" opacity="0.8">1480Hz</text>
+<line x1="141.6" y1="108.4" x2="141.6" y2="116.4" stroke="#666" stroke-width="0.8"/>
+<text x="141.6" y="126.4" font-family="monospace" font-size="8" fill="#333" text-anchor="middle">2.169"</text>
+<text x="141.6" y="138.4" font-family="monospace" font-size="8" fill="#2a6db5" text-anchor="middle">A7</text>
+<rect x="147.8" y="65.0" width="9.9" height="134.8" fill="#c46a00" fill-opacity="0.15" stroke="#c46a00" stroke-width="1.5"/>
+<line x1="152.7" y1="65" x2="152.7" y2="199.8" stroke="#c46a00" stroke-width="0.6" stroke-dasharray="5,4" opacity="0.5"/>
+<text transform="rotate(-90,152.7,132.4)" x="152.7" y="132.4" font-family="monospace" font-size="9" fill="#c46a00" text-anchor="middle" font-weight="bold">B4</text>
+<text transform="rotate(-90,152.7,83)" x="152.7" y="83" font-family="monospace" font-size="7" fill="#c46a00" text-anchor="middle" opacity="0.8">494Hz</text>
+<line x1="152.7" y1="199.8" x2="152.7" y2="207.8" stroke="#666" stroke-width="0.8"/>
+<text x="152.7" y="217.8" font-family="monospace" font-size="8" fill="#333" text-anchor="middle">6.740"</text>
+<text x="152.7" y="229.8" font-family="monospace" font-size="8" fill="#c46a00" text-anchor="middle">I1</text>
+<rect x="158.9" y="65.0" width="9.9" height="113.0" fill="#c46a00" fill-opacity="0.15" stroke="#c46a00" stroke-width="1.5"/>
+<line x1="163.8" y1="65" x2="163.8" y2="178.0" stroke="#c46a00" stroke-width="0.6" stroke-dasharray="5,4" opacity="0.5"/>
+<text transform="rotate(-90,163.8,121.5)" x="163.8" y="121.5" font-family="monospace" font-size="9" fill="#c46a00" text-anchor="middle" font-weight="bold">D5</text>
+<text transform="rotate(-90,163.8,83)" x="163.8" y="83" font-family="monospace" font-size="7" fill="#c46a00" text-anchor="middle" opacity="0.8">587Hz</text>
+<line x1="163.8" y1="178.0" x2="163.8" y2="186.0" stroke="#666" stroke-width="0.8"/>
+<text x="163.8" y="196.0" font-family="monospace" font-size="8" fill="#333" text-anchor="middle">5.648"</text>
+<text x="163.8" y="208.0" font-family="monospace" font-size="8" fill="#c46a00" text-anchor="middle">I2</text>
+<rect x="170.0" y="65.0" width="9.9" height="89.2" fill="#c46a00" fill-opacity="0.15" stroke="#c46a00" stroke-width="1.5"/>
+<line x1="174.9" y1="65" x2="174.9" y2="154.2" stroke="#c46a00" stroke-width="0.6" stroke-dasharray="5,4" opacity="0.5"/>
+<text transform="rotate(-90,174.9,109.6)" x="174.9" y="109.6" font-family="monospace" font-size="9" fill="#c46a00" text-anchor="middle" font-weight="bold">F#5</text>
+<text transform="rotate(-90,174.9,83)" x="174.9" y="83" font-family="monospace" font-size="7" fill="#c46a00" text-anchor="middle" opacity="0.8">740Hz</text>
+<line x1="174.9" y1="154.2" x2="174.9" y2="162.2" stroke="#666" stroke-width="0.8"/>
+<text x="174.9" y="172.2" font-family="monospace" font-size="8" fill="#333" text-anchor="middle">4.458"</text>
+<text x="174.9" y="184.2" font-family="monospace" font-size="8" fill="#c46a00" text-anchor="middle">I3</text>
+<rect x="181.1" y="65.0" width="9.9" height="74.6" fill="#c46a00" fill-opacity="0.15" stroke="#c46a00" stroke-width="1.5"/>
+<line x1="186.0" y1="65" x2="186.0" y2="139.6" stroke="#c46a00" stroke-width="0.6" stroke-dasharray="5,4" opacity="0.5"/>
+<text transform="rotate(-90,186.0,102.3)" x="186.0" y="102.3" font-family="monospace" font-size="9" fill="#c46a00" text-anchor="middle" font-weight="bold">A5</text>
+<text transform="rotate(-90,186.0,83)" x="186.0" y="83" font-family="monospace" font-size="7" fill="#c46a00" text-anchor="middle" opacity="0.8">880Hz</text>
+<line x1="186.0" y1="139.6" x2="186.0" y2="147.6" stroke="#666" stroke-width="0.8"/>
+<text x="186.0" y="157.6" font-family="monospace" font-size="8" fill="#333" text-anchor="middle">3.730"</text>
+<text x="186.0" y="169.6" font-family="monospace" font-size="8" fill="#c46a00" text-anchor="middle">I4</text>
+<rect x="192.2" y="65.0" width="9.9" height="58.7" fill="#c46a00" fill-opacity="0.15" stroke="#c46a00" stroke-width="1.5"/>
+<line x1="197.1" y1="65" x2="197.1" y2="123.7" stroke="#c46a00" stroke-width="0.6" stroke-dasharray="5,4" opacity="0.5"/>
+<text transform="rotate(-90,197.1,94.4)" x="197.1" y="94.4" font-family="monospace" font-size="9" fill="#c46a00" text-anchor="middle" font-weight="bold">C#6</text>
+<text transform="rotate(-90,197.1,83)" x="197.1" y="83" font-family="monospace" font-size="7" fill="#c46a00" text-anchor="middle" opacity="0.8">1109Hz</text>
+<line x1="197.1" y1="123.7" x2="197.1" y2="131.7" stroke="#666" stroke-width="0.8"/>
+<text x="197.1" y="141.7" font-family="monospace" font-size="8" fill="#333" text-anchor="middle">2.936"</text>
+<text x="197.1" y="153.7" font-family="monospace" font-size="8" fill="#c46a00" text-anchor="middle">I5</text>
+<rect x="203.3" y="65.0" width="9.9" height="49.0" fill="#c46a00" fill-opacity="0.15" stroke="#c46a00" stroke-width="1.5"/>
+<line x1="208.2" y1="65" x2="208.2" y2="114.0" stroke="#c46a00" stroke-width="0.6" stroke-dasharray="5,4" opacity="0.5"/>
+<text transform="rotate(-90,208.2,89.5)" x="208.2" y="89.5" font-family="monospace" font-size="9" fill="#c46a00" text-anchor="middle" font-weight="bold">E6</text>
+<text transform="rotate(-90,208.2,83)" x="208.2" y="83" font-family="monospace" font-size="7" fill="#c46a00" text-anchor="middle" opacity="0.8">1319Hz</text>
+<line x1="208.2" y1="114.0" x2="208.2" y2="122.0" stroke="#666" stroke-width="0.8"/>
+<text x="208.2" y="132.0" font-family="monospace" font-size="8" fill="#333" text-anchor="middle">2.450"</text>
+<text x="208.2" y="144.0" font-family="monospace" font-size="8" fill="#c46a00" text-anchor="middle">I6</text>
+<line x1="70.0" y1="266.6" x2="213.2" y2="266.6" stroke="#333" stroke-width="1.2"/>
+<line x1="70.0" y1="260.6" x2="70.0" y2="272.6" stroke="#333" stroke-width="1.2"/>
+<line x1="213.2" y1="260.6" x2="213.2" y2="272.6" stroke="#333" stroke-width="1.2"/>
+<text x="141.6" y="282.6" font-family="monospace" font-size="9" text-anchor="middle">FRAME WIDTH = 7.159"  (13 tubes, 1/16" gap)</text>
+<line x1="30" y1="65" x2="30" y2="216.6" stroke="#333" stroke-width="1.2"/>
+<line x1="24" y1="65" x2="36" y2="65" stroke="#333" stroke-width="1.2"/>
+<line x1="24" y1="216.6" x2="36" y2="216.6" stroke="#333" stroke-width="1.2"/>
+<text transform="rotate(-90,18,140.8)" x="18" y="140.8" font-family="monospace" font-size="9" text-anchor="middle">LONGEST = 7.580"</text>
+<rect x="0" y="241" width="253" height="75" fill="#f5f5f5" stroke="#444" stroke-width="1"/>
+<line x1="0" y1="241" x2="253" y2="241" stroke="#444" stroke-width="1.5"/>
+<text x="10" y="259" font-family="monospace" font-size="12" font-weight="bold">SIKU (ZAMPOÑA) · CHILI · KEY D5   —   FRONT ELEVATION</text>
+<text x="10" y="275" font-family="monospace" font-size="9">Tube array: Arka 7 tubes (blue) + Ira 6 tubes (orange)   |   Bore ID: 0.375"   OD: 0.493"   Wall: 0.059"   Longest: 7.580"   Shortest: 2.169"</text>
+<text x="10" y="289" font-family="monospace" font-size="9">Formula: L = 13552/(4×f) − 0.82×bore  +  3/16" trim allowance   |   c = 13552 in/s @ 68°F</text>
+<text x="10" y="303" font-family="monospace" font-size="9">Date: 2026-05-08   Rev: A   Ref: siku-zampona-design-table.xlsx   tonykoop/siku-zampona   CC BY 4.0</text>
+</svg>

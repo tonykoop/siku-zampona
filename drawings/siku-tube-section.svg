@@ -1,0 +1,45 @@
+<svg viewBox="0 0 580 320" xmlns="http://www.w3.org/2000/svg" width="580" height="320">
+<rect width="100%" height="100%" fill="white"/>
+<text x="290" y="22" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">SIKU (ZAMPOÑA) — TUBE CROSS-SECTION DETAIL (All 4 Sizes)</text>
+<text x="290" y="36" font-family="monospace" font-size="9" text-anchor="middle" fill="#555">Values in inches · Closed end = bottom · Open end = top · 2026-05-08</text>
+<circle cx="85" cy="155" r="37.5" fill="#f5e6c8" stroke="#555" stroke-width="1.5"/>
+<circle cx="85" cy="155" r="28.1" fill="#ddeeff" stroke="#2a6db5" stroke-width="1.2"/>
+<circle cx="85" cy="155" r="2.5" fill="#444"/>
+<text x="85" y="107.5" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">Toyo</text>
+<text x="85" y="206.5" font-family="monospace" font-size="8" text-anchor="middle" fill="#555">bore=0.75"</text>
+<text x="85" y="217.5" font-family="monospace" font-size="8" text-anchor="middle" fill="#888">OD=1.0"</text>
+<text x="85" y="228.5" font-family="monospace" font-size="8" text-anchor="middle" fill="#aaa">wall=0.125"</text>
+<line x1="85" y1="155" x2="113.1" y2="155" stroke="#2a6db5" stroke-width="0.8" stroke-dasharray="3,2"/>
+<line x1="85" y1="155" x2="47.5" y2="155" stroke="#888" stroke-width="0.6" stroke-dasharray="3,2"/>
+<circle cx="210" cy="155" r="30.8" fill="#f5e6c8" stroke="#555" stroke-width="1.5"/>
+<circle cx="210" cy="155" r="23.4" fill="#ddeeff" stroke="#2a6db5" stroke-width="1.2"/>
+<circle cx="210" cy="155" r="2.5" fill="#444"/>
+<text x="210" y="114.2" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">Zanka</text>
+<text x="210" y="199.8" font-family="monospace" font-size="8" text-anchor="middle" fill="#555">bore=0.625"</text>
+<text x="210" y="210.8" font-family="monospace" font-size="8" text-anchor="middle" fill="#888">OD=0.821"</text>
+<text x="210" y="221.8" font-family="monospace" font-size="8" text-anchor="middle" fill="#aaa">wall=0.098"</text>
+<line x1="210" y1="155" x2="233.4" y2="155" stroke="#2a6db5" stroke-width="0.8" stroke-dasharray="3,2"/>
+<line x1="210" y1="155" x2="179.2" y2="155" stroke="#888" stroke-width="0.6" stroke-dasharray="3,2"/>
+<circle cx="330" cy="155" r="24.7" fill="#f5e6c8" stroke="#555" stroke-width="1.5"/>
+<circle cx="330" cy="155" r="18.8" fill="#ddeeff" stroke="#2a6db5" stroke-width="1.2"/>
+<circle cx="330" cy="155" r="2.5" fill="#444"/>
+<text x="330" y="120.3" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">Malta</text>
+<text x="330" y="193.7" font-family="monospace" font-size="8" text-anchor="middle" fill="#555">bore=0.5"</text>
+<text x="330" y="204.7" font-family="monospace" font-size="8" text-anchor="middle" fill="#888">OD=0.658"</text>
+<text x="330" y="215.7" font-family="monospace" font-size="8" text-anchor="middle" fill="#aaa">wall=0.079"</text>
+<line x1="330" y1="155" x2="348.8" y2="155" stroke="#2a6db5" stroke-width="0.8" stroke-dasharray="3,2"/>
+<line x1="330" y1="155" x2="305.3" y2="155" stroke="#888" stroke-width="0.6" stroke-dasharray="3,2"/>
+<circle cx="440" cy="155" r="18.5" fill="#f5e6c8" stroke="#555" stroke-width="1.5"/>
+<circle cx="440" cy="155" r="14.1" fill="#ddeeff" stroke="#2a6db5" stroke-width="1.2"/>
+<circle cx="440" cy="155" r="2.5" fill="#444"/>
+<text x="440" y="126.5" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">Chili</text>
+<text x="440" y="187.5" font-family="monospace" font-size="8" text-anchor="middle" fill="#555">bore=0.375"</text>
+<text x="440" y="198.5" font-family="monospace" font-size="8" text-anchor="middle" fill="#888">OD=0.493"</text>
+<text x="440" y="209.5" font-family="monospace" font-size="8" text-anchor="middle" fill="#aaa">wall=0.059"</text>
+<line x1="440" y1="155" x2="454.1" y2="155" stroke="#2a6db5" stroke-width="0.8" stroke-dasharray="3,2"/>
+<line x1="440" y1="155" x2="421.5" y2="155" stroke="#888" stroke-width="0.6" stroke-dasharray="3,2"/>
+<rect x="20" y="267" width="540" height="44" fill="#fff8e0" stroke="#c8a000" stroke-width="1" rx="4"/>
+<text x="30" y="281" font-family="monospace" font-size="9" fill="#554000">End correction (open end only): ΔL = 0.82 × bore_diameter   |   Stopped pipe: odd harmonics only (1f, 3f, 5f …)</text>
+<text x="30" y="295" font-family="monospace" font-size="9" fill="#554000">Tube length formula: L_calc = 13552 / (4 × f_hz) − 0.82 × bore_ID   |   L_cut = L_calc + 3/16" trim allowance</text>
+<text x="30" y="307" font-family="monospace" font-size="9" fill="#777">Plug depth: ~3/8" (Toyo/Zanka) · ~1/4" (Malta/Chili)   |   Material: beeswax, wood dowel, or natural bamboo node</text>
+</svg>
