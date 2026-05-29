@@ -1,0 +1,15 @@
+artifact_path,artifact_type,authority,controlling_source,notes
+drawings/siku-chili-elevation.svg,drawing,derived_preview,siku-zampona-design-table.xlsx,Chili member elevation SVG; derived from design-table. First-order dimensions.
+drawings/siku-chili-frame.svg,drawing,derived_preview,siku-zampona-design-table.xlsx,Chili member frame/binding SVG; derived from design-table.
+drawings/siku-family-overview.svg,drawing,derived_preview,siku-zampona-design-table.xlsx,Four-member family overview comparison SVG; communication only.
+drawings/siku-malta-elevation.svg,drawing,derived_preview,siku-zampona-design-table.xlsx,Malta member elevation SVG; derived from design-table.
+drawings/siku-malta-frame.svg,drawing,derived_preview,siku-zampona-design-table.xlsx,Malta member frame/binding SVG; derived from design-table.
+drawings/siku-toyo-elevation.svg,drawing,derived_preview,siku-zampona-design-table.xlsx,Toyo (bass) member elevation SVG; derived from design-table.
+drawings/siku-toyo-frame.svg,drawing,derived_preview,siku-zampona-design-table.xlsx,Toyo member frame/binding SVG; derived from design-table.
+drawings/siku-tube-section.svg,drawing,derived_preview,siku-zampona-design-table.xlsx,Cross-section detail for tube geometry; first-order estimates.
+drawings/siku-zanka-elevation.svg,drawing,derived_preview,siku-zampona-design-table.xlsx,Zanka (soprano) member elevation SVG; derived from design-table.
+drawings/siku-zanka-frame.svg,drawing,derived_preview,siku-zampona-design-table.xlsx,Zanka member frame/binding SVG; derived from design-table.
+wolfram/instrument-model.wl,wolfram_source,pending_measurement,siku-zampona-design-table.xlsx,Wolfram instrument model; source-only at L2 — runtime execution not yet recorded.
+wolfram/siku-zampona-wolfram-model.wl,wolfram_source,pending_measurement,siku-zampona-design-table.xlsx,Instrument-specific Wolfram model; source-only at L2.
+wolfram-starter.wl,wolfram_source,pending_measurement,wolfram/siku-zampona-wolfram-model.wl,Root-mode loader; source-only at L2.
+family-spec.csv,family_spec,pending_measurement,siku-zampona-design-table.xlsx,Four-member family geometry summary; dimension_provenance is measurement_required until prototype run.
