@@ -1,6 +1,6 @@
 # Siku (Zampoña)
 
-**Heifer Zephyr · instrument-maker-v4 · packet v4.3 · 2026-05-08**
+**Status: L2 V5 build-packet candidate** · Heifer Zephyr · instrument-maker-v4 · packet v4.3 · 2026-05-08
 
 Engineering documentation for the *siku* (Aymara: *siku'*, Spanish: *zampoña*) — the Andean panpipe, built as a four-member family in a complete v4.3 root-mode packet.
 
