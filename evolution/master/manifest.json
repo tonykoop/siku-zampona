@@ -1,0 +1,42 @@
+{
+  "product": "siku-zampona",
+  "pipeline": "studiopipeline:evolution-pipeline",
+  "stage": "0-intake",
+  "master_revision": "rev-A (pre-commit intake, 2026-07-01)",
+  "generated": "2026-07-01",
+  "cad_masters": [
+    {
+      "path": "cad/siku-zampona.scad",
+      "format": "openscad-source",
+      "sha256": "2a5465974eeee7d500f8a04d56a068248ebea6229cdf85e638d22fdd83c4d857",
+      "authority": "pending_measurement",
+      "lossy": false,
+      "notes": "New parametric master; two-rank (arka+ira) closed-pipe tube-length envelope, variant-aware (Toyo/Zanka/Malta/Chili). Voicing/mouth-edge and frame-rail pockets out of scope."
+    },
+    {
+      "path": "siku-zampona-design-table.xlsx",
+      "format": "design-table",
+      "sha256": "abeaa760751735b362ce462226c74f201f4b278d29879b2581cf043e53429e08",
+      "authority": "fabrication",
+      "lossy": false,
+      "notes": "Current dimensional authority (four-member family: root pitches, bore/wall/OD, tube-length formula)."
+    },
+    {
+      "path": "wolfram/siku-zampona-wolfram-model.wl",
+      "format": "wolfram-source",
+      "sha256": "cd64cbee0b3e6098984514b6a3940cb2521a6801b37b02fbf24234c51692e44a",
+      "authority": "pending_measurement",
+      "lossy": false,
+      "notes": "Source-only (not executed); L2 evidence. Pre-existing in this packet, not generated this session."
+    },
+    {
+      "path": "wolfram/instrument-model.wl",
+      "format": "wolfram-source",
+      "sha256": "059aef43a0987673f0960ffd937bdcd8dbbb858a165790cee17d95c5244e75df",
+      "authority": "pending_measurement",
+      "lossy": false,
+      "notes": "Source-only (not executed); L2 evidence. Pre-existing in this packet, not generated this session."
+    }
+  ],
+  "notes": "OpenSCAD source + design table are the current masters; no STEP export yet (no native SolidWorks/STEP CAD in this packet — see cad/README.md authority chain). Gate A (Alpha workspace compile) not yet run."
+}
