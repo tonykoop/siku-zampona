@@ -13,3 +13,4 @@ wolfram/instrument-model.wl,wolfram_source,pending_measurement,siku-zampona-desi
 wolfram/siku-zampona-wolfram-model.wl,wolfram_source,pending_measurement,siku-zampona-design-table.xlsx,Instrument-specific Wolfram model; source-only at L2.
 wolfram-starter.wl,wolfram_source,pending_measurement,wolfram/siku-zampona-wolfram-model.wl,Root-mode loader; source-only at L2.
 family-spec.csv,family_spec,pending_measurement,siku-zampona-design-table.xlsx,Four-member family geometry summary; dimension_provenance is measurement_required until prototype run.
+cad/siku-zampona.scad,cad_model,pending_measurement,family-spec.csv,New parametric two-rank (arka+ira) closed-pipe tube-length OpenSCAD master; equation-driven from design.md sec 2.1; tube lengths and frame width cross-checked against family-spec.csv at render time for all 4 variants; not fabrication authority; voicing/mouth-edge and frame-rail pockets out of scope.

@@ -1,6 +1,6 @@
 # Siku (Zampoña)
 
-**Status: L2 V5 build-packet candidate** · Heifer Zephyr · instrument-maker-v4 · packet v4.3 · 2026-05-08
+**Status:** L2 V5 build-packet candidate · Heifer Zephyr · instrument-maker-v4 · packet v4.3 · 2026-05-08
 
 Engineering documentation for the *siku* (Aymara: *siku'*, Spanish: *zampoña*) — the Andean panpipe, built as a four-member family in a complete v4.3 root-mode packet.
 
@@ -72,6 +72,8 @@ Sanity check: `L_calc(A4, bore=0.625") = 13552/(4×440) − 0.82×0.625 = 7.188"
 | `photo-shotlist.md` | 36-shot photo list |
 | `supplier-rfq.md` | RFQ templates for materials |
 | `siku-zampona-design-table.xlsx` | Master design table (all 4 members) |
+| `cad/siku-zampona.scad` | Parametric OpenSCAD master — two-rank closed-tube envelope (`pending_measurement`) |
+| `evolution/` | Evolution-pipeline Stage 0 intake (manifest, design-intent, revision register) |
 
 ---
 
